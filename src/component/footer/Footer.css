@@ -1,0 +1,114 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-container{
+    display: flex;
+    background-color: rgb(15, 14, 14);
+    padding: 10px;
+    justify-content: space-between;
+}
+.copyright{
+    text-align: center;
+    padding: 5px;
+    color:#000;
+}
+.social{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.social div{
+    display: flex;
+    margin-top: auto;
+}
+.social div a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social div a svg{
+    width: 20px;
+    height: 20px;
+}
+
+.social div a:not(:last-child){
+    margin-right: 10px;
+}
+
+.social div a svg use {
+    fill:#fff;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.col:not(:last-child){
+    margin-right: 50px;
+}
+
+.footer-container div{
+    display: flex;
+    
+}
+
+.col .col-heading{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: .7rem;
+}
+
+.col ul{
+    list-style: square;
+    margin-left: 20px;
+}
+
+.col ul li{
+    color: #fff;
+}
+
+.col ul li a{
+    color: rgb(173, 170, 170);;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.address .heading{
+    font-size: .8rem;
+    color: #fff;
+}
+.address .text{
+    font-size: .7rem;
+    color: rgb(173, 170, 170);
+}
+
+.phone:not(:last-child){
+    margin-top: .5rem;
+}
+
+.phone{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.phone .heading{
+    font-size: .8rem;
+    color: #fff;
+}
+.phone .text{
+    font-size: .7rem;
+    color: rgb(173, 170, 170);
+    margin-left: 10px;
+}
