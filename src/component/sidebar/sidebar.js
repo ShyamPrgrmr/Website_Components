@@ -7,7 +7,7 @@ import Slider from '@material-ui/core/Slider';
 
 export default class Sidebar extends Component {
 
-    state={value:10,setValue:37,featureList:[],typeList:[]}
+    state={sliderValue:10,featureList:[],typeList:[],allKeywords:[]}
 
     constructor(props){
         super(props);
@@ -20,11 +20,37 @@ export default class Sidebar extends Component {
     componentWillReceiveProps=(props)=>{
         let types = props.keywords.venueType;
         let features = props.keywords.venueFeature;
-        this.setState({typeList:types,featureList:features});
+        let searchedList = props.searchedkeyword;
+
+        let templist=[];
+        templist.push(...types);
+        templist.push(...features);
+        
+
+        let tempKeyword =  templist.map(item=>{
+            if(searchedList.indexOf(item)===-1){
+                return {value:item,status:false}
+            }else{
+                return {value:item,status:true};
+            }
+        })
+        this.setState({typeList:types,featureList:features,allKeywords:tempKeyword});
+    }
+
+    checkedStatus=(it)=>{
+        let list = this.state.allKeywords;
+        
+        for(let i=0;i<list.length;i++){
+            let item = list[i];
+            if(item.value===it){
+                return (item.status)
+            }
+        }
+        
     }
 
     handleSliderChange = (event, newValue) => {
-        this.setState({value:newValue})
+        this.setState({sliderValue:newValue})
     };
 
     addSerchKeyword=(key)=>{
@@ -34,33 +60,40 @@ export default class Sidebar extends Component {
         this.props.removeSearchKeyword(key);
     }
 
+    checkboxchecked=(e,value)=>{
+        
+        let name = e.target.name;
+
+
+        if(e.target.checked){
+            this.addSerchKeyword(value);
+        }else{
+            this.removeSearchKeyWord(value);
+        }
+
+       
+    }
+
     displayVenueTypeList=()=>{
         let list = this.state.typeList;
 
         let types = list.map(item=>{
         return <div><input id={item+''} onChange={(e)=>{
-            if(e.target.checked){
-                this.addSerchKeyword(item);
-            }else{
-                this.removeSearchKeyWord(item);
-            }
-        }} type='checkbox'/><label for={item+''}>{item}</label></div>
+           this.checkboxchecked(e,item);
+        }} type='checkbox' name={item+''} checked={this.checkedStatus(item)}/><label for={item+''}>{item}</label></div>
         });
         return types;
     }
 
     displayVenueFeatureList=()=>{
         let list = this.state.featureList;
-        
         let features = list.map(item=>{
-        return <div><input id={item+''} onChange={(e)=>{
-            if(e.target.checked){
-                this.addSerchKeyword(item);
-            }else{
-                this.removeSearchKeyWord(item);
-            }
-        }} type='checkbox'/><label for={item+''}>{item}</label></div>
+        
+        return <div><input id={item+''} onChange={(e)=>{    
+            this.checkboxchecked(e,item);
+        }} type='checkbox'  name={item+''} checked={this.checkedStatus(item)}/><label for={item+''}>{item}</label></div>
         });
+
         return features;
     }
     
@@ -99,12 +132,12 @@ export default class Sidebar extends Component {
                     </div>
                     <div className='filter--body'>  
                         <Slider
-                            value={this.state.value}
+                            value={this.state.sliderValue}
                             onChange={this.handleSliderChange}
                             valueLabelDisplay="auto"
                             aria-labelledby="range-slider"
                             color='secondary'
-                            max={1000}
+                            max={5000}
                             min={10}
                         />
                     </div>

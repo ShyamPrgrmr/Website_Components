@@ -6,6 +6,8 @@ import Sidebar from './component/sidebar/sidebar';
 import SearchBar from './component/searchBar/SearchBar';
 import Footer from './component/footer/Footer';
 import './App.css'
+import { Router } from 'react-router-dom'
+import  Contactus from './component/contactus/contactUs';
 
 export default class  App extends React.Component{
     constructor(props){
@@ -111,24 +113,29 @@ export default class  App extends React.Component{
 
       return(
         <div>
-          <Navbar/>
-          <div className='container'>
-              <Sidebar 
-                  addSearchKeyword={this.addSearchKeyword}
-                  removeSearchKeyword={this.removeSearchKeyword}
-                  keywords={this.state.keywordList}
-                  clearSearch={this.clearSearch}
-              />
+         
+            <Navbar/>
               
-              <div class='search-list'>
-                <SearchBar keywords={this.state.searchkeyword} 
-                    removeSearchKeyword={this.removeSearchKeyword}
-                />
-                {this.displayList()}
+            <div className='container'>
+                  <Sidebar 
+                      addSearchKeyword={this.addSearchKeyword}
+                      removeSearchKeyword={this.removeSearchKeyword}
+                      keywords={this.state.keywordList}
+                      searchedkeyword={this.state.searchkeyword}
+                      clearSearch={this.clearSearch}
+                  />
+                  
+                  <div class='search-list'>
+                    <SearchBar keywords={this.state.searchkeyword} 
+                        removeSearchKeyword={this.removeSearchKeyword}
+                    />
+                    {this.displayList()}
+                  </div>
+                  
               </div>
               
-          </div>
-          <Footer/>
+            <Footer/>
+          
         </div>
       );
     } 

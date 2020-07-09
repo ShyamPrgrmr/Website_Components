@@ -69,3 +69,17 @@
     color: #fff;
     cursor: pointer;
 }
+
+@media(max-width:800px){
+    .sidebar{   
+        margin-right: 5px;
+    }
+}
+  
+
+@media(max-width:750px){
+    .sidebar{   
+        margin-right: 0px;
+    }
+}
+  

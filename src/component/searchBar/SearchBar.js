@@ -24,7 +24,11 @@ export default class SearchBar extends Component{
 
     displaylist=()=>{
         let list=this.state.list.map(item=>{
-            return(<li key={item}> {item}</li>)
+            return(
+            
+            <li key={item}> {item} <button onClick={(e)=>{e.preventDefault(); this.removeItem(item)}}>&#10005;</button></li>
+            
+            )
         })
         return list;
     }
@@ -33,7 +37,9 @@ export default class SearchBar extends Component{
         return(
         <div class='searchBar'>
             <ul>
+                
                 {this.displaylist()} 
+                
             </ul>
         </div>);
     }

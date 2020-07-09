@@ -11,3 +11,22 @@
   display: flex;
   flex-direction: column;
 }
+
+
+
+@media(max-width:800px){
+  .container{
+     padding: 2px;
+     
+  }  
+}
+
+@media(max-width:750px){
+  .container{
+    flex-direction: column;
+    margin-top: 0rem;
+  }  
+  .search-list{
+    margin-top: 1rem;
+  }
+}

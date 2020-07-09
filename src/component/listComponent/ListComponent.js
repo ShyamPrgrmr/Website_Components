@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import './style.css';
+import './listComponent.css';
 
 export default class FirstComponent extends Component{
    
@@ -63,7 +63,7 @@ export default class FirstComponent extends Component{
                     <div class='venue__facilities'>
                     {this.facilitiesList()}
                     <div class='list list-more'>
-                            <a href='#'> <span>+</span> More </a>
+                            <p href='#'> <span>+</span> More </p>
                     </div>
                 </div>
 
