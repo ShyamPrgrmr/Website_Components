@@ -17,6 +17,27 @@
     flex-direction: column;
 }
 
+@media(max-width:550px){
+    .contactus-form{
+        padding: .4rem;
+        width: 25rem;
+    }
+}
+
+@media(max-width:450px){
+    .contactus-form{
+        padding: .4rem;
+        width: 20rem;
+    }
+}
+
+@media(max-width:350px){
+    .contactus-form{
+        padding: .4rem;
+        width: 17rem;
+    }
+}
+
 .contactus-form input,
 .contactus-form textarea{
     padding: 10px;

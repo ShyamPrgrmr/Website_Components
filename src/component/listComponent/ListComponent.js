@@ -4,14 +4,77 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import './listComponent.css';
 export default class FirstComponent extends Component{
-   
+    
+    constructor(props){
+        super(props);
+        this.state = this.props.data;
+    }
+    componentDidMount=()=>{
+    }
+    
+    componentWillUpdate=()=>{
+
+    }
+
+    onImageChange=(e)=>{
+       
+        let list = this.state;
+        if(e===0){
+            let newImages={
+                img_1:list.images.img_1,
+                img_2:list.images.img_2,
+                img_3:list.images.img_3,
+                img_4:list.images.img_4,
+            };
+            this.setState({images:newImages},()=>{
+                
+            });
+
+        }else if(e===1){
+            let newImages={
+                img_1:list.images.img_2,
+                img_2:list.images.img_3,
+                img_3:list.images.img_4,
+                img_4:list.images.img_1,
+            };
+            this.setState({images:newImages},()=>{
+                
+            });
+        }else if(e===2){
+            let newImages={
+                img_1:list.images.img_3,
+                img_2:list.images.img_4,
+                img_3:list.images.img_2,
+                img_4:list.images.img_1,
+            };
+            this.setState({images:newImages},()=>{
+                
+            });
+        }else if(e===3){
+            
+            let newImages={
+                img_1:list.images.img_4,
+                img_2:list.images.img_1,
+                img_3:list.images.img_2,
+                img_4:list.images.img_3,
+            }; 
+            this.setState({images:newImages},()=>{
+                
+            });
+        }
+        
+    }
+
+    onImage=(e)=>{
+        console.log(e)
+    }
     
     innerContainer_1=()=>{
         return(
                  <>
                     <div class='main-image'>
 
-                       <Carousel infiniteLoop={true}
+                       <Carousel onChange={this.onImageChange} onClickItem={this.onImage} infiniteLoop={true}
                        
                        interval={1} 
                        showArrows={true}  
@@ -40,13 +103,13 @@ export default class FirstComponent extends Component{
                     </div>
                     <div class='sub-images'>
                         <div class='sub-images--img'>
-                            <img src={this.props.data.images.img_2} alt='image'></img>
+                            <img src={this.state.images.img_2} alt='image'></img>
                         </div>
                         <div class='sub-images--img'>
-                            <img src={this.props.data.images.img_3} alt='image'></img>
+                            <img src={this.state.images.img_3} alt='image'></img>
                         </div>
                         <div class='sub-images--img'>
-                            <img src={this.props.data.images.img_4} alt='image'></img>
+                            <img src={this.state.images.img_4} alt='image'></img>
                         </div>
                     </div> 
                 </>
