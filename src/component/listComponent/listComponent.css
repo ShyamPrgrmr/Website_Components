@@ -26,18 +26,19 @@ html{
 .main-image{
     flex: .5;
 }
-.main-image img{
-    object-fit: cover;
-    width: 100%;
-    max-height: 15rem;
-    min-width: 246px;
-    min-height: 168px;
+.main-image .carousel-root{
+    width: 100% !important;
+    max-height: 15rem !important;
+    min-width: 246px !important;
+    min-height: 100px !important;
+    
 }
 
 
 .sub-images{
     flex: .3;
     display: flex;
+    margin-top: 5px;
 }
 
 .sub-images .sub-images--img{
@@ -169,6 +170,11 @@ html{
     .list-more p{
         font-size: 1rem;   
     } 
+    
+  }
+
+  @media(max-width:1070px){
+      
   }
 
   @media(max-width:1050px){
@@ -352,12 +358,15 @@ html{
       .list:not(:first-child){
         margin-left: 5px;   
     }
-    .main-image img{
-        object-fit: cover;
-        width: 100%;
-        max-height: 15rem;
-        min-width: 168px;
-        min-height: 68px;
+    .main-image .carousel-root{
+        width: 100% !important;
+        max-height: 15rem !important;
+        min-width: 168px !important;
+        min-height: 68px !important;
+    }
+    .carousel{
+        max-height: 220px;
+
     }
   }
 
@@ -414,4 +423,24 @@ html{
 
 @media(max-width:390px){
 
+}
+
+.carousel-status{
+    display: none;
+}
+
+
+.legend{
+    display: none !important;
+}
+
+.slide div img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.carousel{
+    max-height: 240px;
+    width: 100%;
 }

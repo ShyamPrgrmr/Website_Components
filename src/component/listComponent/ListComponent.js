@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
-import './listComponent.css';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import './listComponent.css';
 export default class FirstComponent extends Component{
    
     
@@ -8,7 +10,33 @@ export default class FirstComponent extends Component{
         return(
                  <>
                     <div class='main-image'>
-                       <img src={this.props.data.images.img_1} alt='image'></img>
+
+                       <Carousel infiniteLoop={true}
+                       
+                       interval={1} 
+                       showArrows={true}  
+                       useKeyboardArrows={true} 
+                       showIndicators={true} showThumbs={false} >
+                            <div>
+                                <img src={this.props.data.images.img_1} />
+                                <p className="legend">Legend 1</p>
+                            </div>
+                            
+                            <div>
+                                <img src={this.props.data.images.img_2} />
+                                <p className="legend">Legend 2</p>
+                            </div>
+
+                            <div>
+                                <img src={this.props.data.images.img_3} />
+                                <p className="legend">Legend 3</p>
+                            </div>
+                            <div>
+                                <img src={this.props.data.images.img_4} />
+                                <p className="legend">Legend 3</p>
+                            </div>
+                       </Carousel>
+                    
                     </div>
                     <div class='sub-images'>
                         <div class='sub-images--img'>

@@ -67,3 +67,9 @@
 .contactus-form button:active{
     background-color: rgb(20, 20, 20);   
 }
+
+@media(max-width:750px){
+    .contactus-container{
+        margin-top: 0rem;
+    }
+}

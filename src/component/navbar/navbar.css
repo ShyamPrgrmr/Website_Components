@@ -116,6 +116,7 @@
 
 .nc-button{
     position: absolute;
+    cursor: pointer;
     right:10px;
     top:10px;
     border: none;

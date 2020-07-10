@@ -1,13 +1,28 @@
 import React,{Component} from 'react';
 import './navbar.css';
 import toggler from './toggler.png';
+import { Link } from 'react-router-dom';
 
 export default class Sidebar extends Component {
     constructor(props){
         super(props);
     }  
     
-    state={togglenavbar:false};
+    state={togglenavbar:false,routes:{
+        home:'/',
+        contactus:'/contactus',
+        venue:'/',
+        testimonials:'/',
+        about:'/',
+        blogs:'/',
+        signinup:'/',
+        vendors:'/',
+        joinnow:'/'
+    }};
+
+    componentDidMount=()=>{
+       
+    }
 
     navbartoggle=()=>{
         this.setState({togglenavbar:!this.state.togglenavbar});
@@ -22,8 +37,8 @@ export default class Sidebar extends Component {
             <> 
             <div className='navbar'>
                 <div className='navbar--row__1'>
-                    <a className='navbar--a font-small' href='#'>Join Now</a>
-                    <a className='navbar--a margin-left-small font-small' href='#'>Contact Us</a>
+                    <Link className='navbar--a font-small' to={this.state.routes.joinnow}>Join Now</Link>
+                    <Link className='navbar--a margin-left-small font-small' to={this.state.routes.contactus}>Contact Us</Link>
                 </div>
 
                 <div className='navbar--row__2'>
@@ -32,13 +47,13 @@ export default class Sidebar extends Component {
                     </div>
                     <div className="navbar--right">
                         <ul>
-                            <li><a href='#' className='navbar--a navbar--active'>Home</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Venue</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Testimonials</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Vendors</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>About Us</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Blogs</a></li>
-                            <li><a href='#' className="a">Sign In/Up</a></li>
+                            <li><Link to={this.state.routes.home} className='navbar--a navbar--active'>Home</Link></li>
+                            <li><Link to={this.state.routes.venue} className='navbar--a navbar--inactive'>Venue</Link></li>
+                            <li><Link to={this.state.routes.testimonials} className='navbar--a navbar--inactive'>Testimonials</Link></li>
+                            <li><Link to={this.state.routes.vendors} className='navbar--a navbar--inactive'>Vendors</Link></li>
+                            <li><Link to={this.state.routes.about} className='navbar--a navbar--inactive'>About Us</Link></li>
+                            <li><Link to={this.state.routes.blogs} className='navbar--a navbar--inactive'>Blogs</Link></li>
+                            <li><Link to={this.state.routes.signinup} className="a">Sign In/Up</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -59,16 +74,16 @@ export default class Sidebar extends Component {
                 
                 <div className='nc-container' style={{display:this.displayNavbar()}}>
                     <ul>
-                    <li><a href='#' className='navbar--a navbar--active'>Home</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Venue</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Testimonials</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Vendors</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>About Us</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Blogs</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Join now</a></li>
-                            <li><a href='#' className='navbar--a navbar--inactive'>Contact us</a></li>
-                            <li><a href='#' className="a">Sign In/Up</a></li>
-                    </ul>
+                    <li><Link to={this.state.routes.home} className='navbar--a navbar--active'>Home</Link></li>
+                        <li><Link to={this.state.routes.venue} className='navbar--a navbar--inactive'>Venue</Link></li>
+                        <li><Link to={this.state.routes.testimonials} className='navbar--a navbar--inactive'>Testimonials</Link></li>
+                        <li><Link to={this.state.routes.vendors} className='navbar--a navbar--inactive'>Vendors</Link></li>
+                        <li><Link to={this.state.routes.about} className='navbar--a navbar--inactive'>About Us</Link></li>
+                        <li><Link to={this.state.routes.blogs} className='navbar--a navbar--inactive'>Blogs</Link></li>
+                        <li><Link className='navbar--a navbar--inactive' to={this.state.routes.joinnow}>Join Now</Link></li>
+                        <li><Link className='navbar--a navbar--inactive' to={this.state.routes.contactus}>Contact Us</Link></li>
+                        <li><Link to={this.state.routes.signinup} className="a">Sign In/Up</Link></li>
+                </ul>
                 </div>
             
             </div>

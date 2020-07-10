@@ -13,8 +13,24 @@ export default class Sidebar extends Component {
         super(props);
     }   
 
-    componentDidMount=()=>{
-       
+    componentDidMount=(props=this.props)=>{
+        let types = props.keywords.venueType;
+        let features = props.keywords.venueFeature;
+        let searchedList = props.searchedkeyword;
+
+        let templist=[];
+        templist.push(...types);
+        templist.push(...features);
+        
+
+        let tempKeyword =  templist.map(item=>{
+            if(searchedList.indexOf(item)===-1){
+                return {value:item,status:false}
+            }else{
+                return {value:item,status:true};
+            }
+        })
+        this.setState({typeList:types,featureList:features,allKeywords:tempKeyword});
     }
 
     componentWillReceiveProps=(props)=>{
