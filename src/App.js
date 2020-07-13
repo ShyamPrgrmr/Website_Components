@@ -8,6 +8,7 @@ import Footer from './component/footer/Footer';
 import './App.css'
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom'
 import  Contactus from './component/contactus/contactUs';
+import Home from './component/home/Home';
 
 export default class  App extends React.Component{
     constructor(props){
@@ -105,6 +106,7 @@ export default class  App extends React.Component{
     componentDidMount=()=>{
       this.fetchList();
       this.fetchVenueTypesAndVenueFeatures();
+      console.log(this.props);
     }
 
     render(){
@@ -117,10 +119,13 @@ export default class  App extends React.Component{
             <Navbar/>
               
               <Switch>
+                  <Route path='/home'>
+                    <Home/>
+                  </Route>
                   <Route path="/contactus">
                     <Contactus />
                   </Route>
-                  <Route path="/">
+                  <Route path="/testimonials">
                     <div className='container'>
                       <Sidebar 
                           addSearchKeyword={this.addSearchKeyword}
@@ -143,9 +148,8 @@ export default class  App extends React.Component{
 
 
               
-              
-              <Footer/>
             </Router>
+            <Footer/>
         </div>
       );
     } 

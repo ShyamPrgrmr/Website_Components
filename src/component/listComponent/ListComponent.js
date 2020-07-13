@@ -82,21 +82,21 @@ export default class FirstComponent extends Component{
                        showIndicators={true} showThumbs={false} >
                             <div>
                                 <img src={this.props.data.images.img_1} />
-                                <p className="legend">Legend 1</p>
+            
                             </div>
                             
                             <div>
                                 <img src={this.props.data.images.img_2} />
-                                <p className="legend">Legend 2</p>
+                               
                             </div>
 
                             <div>
                                 <img src={this.props.data.images.img_3} />
-                                <p className="legend">Legend 3</p>
+                               
                             </div>
                             <div>
                                 <img src={this.props.data.images.img_4} />
-                                <p className="legend">Legend 3</p>
+                                
                             </div>
                        </Carousel>
                     

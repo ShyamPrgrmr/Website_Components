@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './contactUs.css';
+import { withRouter} from 'react-router-dom'
 
 
-export default class ContactUs extends Component{
+class ContactUs extends Component{
     
     state={name:'',contact:'',email:'',message:''}
     constructor(props){
@@ -39,3 +40,5 @@ export default class ContactUs extends Component{
         </div>);
     }
 }
+
+export default withRouter(ContactUs);

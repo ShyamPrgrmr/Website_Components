@@ -9,19 +9,24 @@ export default class Sidebar extends Component {
     }  
     
     state={togglenavbar:false,routes:{
-        home:'/',
+        home:'/home',
         contactus:'/contactus',
         venue:'/',
-        testimonials:'/',
+        testimonials:'/testimonials',
         about:'/',
         blogs:'/',
         signinup:'/',
         vendors:'/',
         joinnow:'/'
-    }};
+    },
+    currentRoute:'/home'};
 
     componentDidMount=()=>{
-       
+        
+    }
+
+    componentWillReceiveProps=(props)=>{
+        
     }
 
     navbartoggle=()=>{
