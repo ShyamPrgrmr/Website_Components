@@ -10,21 +10,21 @@ export default class AboutUs extends Component{
     page=()=>{
         if(this.state.page===1){
             return(
-                <div className='page' >
-                    <img src={page1img}></img>
-                </div>
+                
+                    <img src={page1img} class={this.state.page===1?'animate':'img'}></img>
+                
             )
         }else if(this.state.page===2){
             return(
-                <div className='page'>
-                    <img src={page2img}></img>
-                </div>
+                
+                    <img src={page2img} class={this.state.page===2?'animate':'img'}></img>
+                
             )
         }else{
             return(
-                <div className='page' >
-                    <img src={page1img}></img>
-                </div>
+               
+                    <img src={page1img} class={this.state.page===3?'animate':'img'}></img>
+               
             )
         }
     }
@@ -45,7 +45,9 @@ export default class AboutUs extends Component{
                     <button className={this.state.page===3?'button-box__btn button-active':'button-box__btn'} onClick={(e)=>{e.preventDefault(); this.onButtonClick(3);}}>Why Us?</button>
                 </div>
                 <div class='page-container'>
-                    {this.page()}
+                    <div className='page'>
+                        {this.page()}
+                    </div>
                 </div>
             </div>
         )

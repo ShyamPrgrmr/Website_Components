@@ -22,6 +22,20 @@
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+    transition: all .3s;
+    background-color: transparent;
+    font-size: 1rem;
+}
+@media(max-width:800px){
+    .navbar--a{
+        font-size: .8rem;
+    }
+}
+
+.navbar--a:hover,
+.navbar--a:active{
+    color: rgb(255, 255, 255); 
 }
 
 .navbar--row__2{
@@ -53,13 +67,21 @@
 
 .navbar--active{
     color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+    
     font-weight: 500;
+}
+
+.navbar--active__small{
+    color: rgb(255, 255, 255);
+}
+
+.navbar--inactive__small{
+    color: rgb(173, 170, 170);
 }
 
 .navbar--inactive{
     color: rgb(173, 170, 170);
-    font-size: 1rem;
+    
 }
 
 
@@ -171,4 +193,20 @@ display: flex;
     .navbar{
         display: none;
     }
+}
+
+
+.flex-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-svg{
+    height: .8rem;
+    width:.8rem;
+}
+
+.nav-svg use{
+    fill: #fff;
 }

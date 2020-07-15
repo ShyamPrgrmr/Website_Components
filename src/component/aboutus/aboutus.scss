@@ -80,6 +80,21 @@ $color_secondary:#e9d4b6;
             img{
                 width: 100%;
             }
+            .animate{
+                animation: imgLoad 1s ease-in;
+            }
         }
+    }
+}
+
+@keyframes imgLoad{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
     }
 }

@@ -58,3 +58,13 @@
     margin-top: 2rem; }
     .aboutus-container .page-container .page img {
       width: 100%; }
+    .aboutus-container .page-container .page .animate {
+      animation: imgLoad 1s ease-in; }
+
+@keyframes imgLoad {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: .5; }
+  100% {
+    opacity: 1; } }

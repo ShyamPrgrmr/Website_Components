@@ -155,16 +155,7 @@ export default class Home extends Component{
             </div>
             <div className='booknow'>
 
-                <div className='booknow-box'>
-                    <p className='heading'>Book Now</p>
-                    <p className='text'>Disount on Pre-Booking</p>
-                    <ul className='list'>
-                        <li>Banquests</li>
-                        <li>Resorts</li>
-                        <li>Vendors</li>
-                    </ul>
-                    <a href='/home' class='link'>Explore</a>
-                </div>
+                
 
                 <Carousel
                 infiniteLoop={true}
@@ -173,6 +164,44 @@ export default class Home extends Component{
                 useKeyboardArrows={true} 
                 showIndicators={true} showThumbs={false}>
                     <div>
+                        <img src={promotion} alt='image'></img>
+                        <div className='booknow-box'>
+                            <p className='heading'>Book Now</p>
+                            <p className='text'>Disount on Pre-Booking</p>
+                            <ul className='list'>
+                            <li>Banquests</li>
+                            <li>Resorts</li>
+                            <li>Vendors</li>
+                            </ul>
+                            <a href='/home' class='link'>Explore</a>
+                        </div>
+                    </div>
+
+                    <div>
+                    <div className='booknow-box'>
+                            <p className='heading'>Book Now</p>
+                            <p className='text'>Disount on Pre-Booking</p>
+                            <ul className='list'>
+                            <li>Banquests</li>
+                            <li>Resorts</li>
+                            <li>Vendors</li>
+                            </ul>
+                            <a href='/home' class='link'>Explore</a>
+                        </div>
+                        <img src={promotion} alt='image'></img>
+                    </div>
+
+                    <div>
+                    <div className='booknow-box'>
+                            <p className='heading'>Book Now</p>
+                            <p className='text'>Disount on Pre-Booking</p>
+                            <ul className='list'>
+                            <li>Banquests</li>
+                            <li>Resorts</li>
+                            <li>Vendors</li>
+                            </ul>
+                            <a href='/home' class='link'>Explore</a>
+                        </div>
                         <img src={promotion} alt='image'></img>
                     </div>
 

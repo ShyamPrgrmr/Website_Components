@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-basis: content;
   overflow: auto;
+  animation: animateAll .8s ease-in-out;
 }
 .search-list{
   flex: .8;
@@ -12,7 +13,14 @@
   flex-direction: column;
 }
 
-
+@keyframes animateAll{
+  0%{
+      opacity: 0.2;
+  }
+  100%{
+      opacity: 1;
+  }
+}
 
 @media(max-width:800px){
   .container{
