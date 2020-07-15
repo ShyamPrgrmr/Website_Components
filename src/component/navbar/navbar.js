@@ -13,7 +13,7 @@ export default class Sidebar extends Component {
         contactus:'/contactus',
         venue:'/',
         testimonials:'/testimonials',
-        about:'/',
+        about:'/aboutus',
         blogs:'/',
         signinup:'/',
         vendors:'/',

@@ -9,6 +9,7 @@ import './App.css'
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom'
 import  Contactus from './component/contactus/contactUs';
 import Home from './component/home/Home';
+import AboutUs from './component/aboutus/Aboutus';
 
 export default class  App extends React.Component{
     constructor(props){
@@ -125,6 +126,11 @@ export default class  App extends React.Component{
                   <Route path="/contactus">
                     <Contactus />
                   </Route>
+
+                  <Route path="/aboutus">
+                    <AboutUs/>
+                  </Route>
+
                   <Route path="/testimonials">
                     <div className='container'>
                       <Sidebar 
