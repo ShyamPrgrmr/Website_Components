@@ -8,7 +8,37 @@ html{
     font-size: 16px;
 }
 
+.popup-en{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    z-index: 10;
+
+}
+
+.popup-en .popup-img{
+    height: 80%;
+    width: 50%;
+}
+
+.popup-di{
+    display: none;
+}
+
+.popup-close{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+}
+
 .wrapper{
+    position: relative;
     display: flex;
     width:100%;
     padding-top: 20px;

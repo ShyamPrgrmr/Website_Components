@@ -6,12 +6,44 @@
   flex-basis: content;
   overflow: auto;
   animation: animateAll .8s ease-in-out;
+  
 }
 .search-list{
   flex: .8;
   display: flex;
   flex-direction: column;
 }
+
+.popup-disable{
+  display: none;
+}
+.popup{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+.popup-img{
+  height: 100%;
+  width: 100%;
+}
+.popup-close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
 
 @keyframes animateAll{
   0%{

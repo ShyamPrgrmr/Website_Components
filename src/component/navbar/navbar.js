@@ -13,8 +13,8 @@ export default class Sidebar extends Component {
     state={togglenavbar:false,routes:{
         home:'/home',
         contactus:'/contactus',
-        venue:'/',
-        testimonials:'/testimonials',
+        venue:'/venue',
+        testimonials:'/',
         about:'/aboutus',
         blogs:'/',
         signinup:'/',

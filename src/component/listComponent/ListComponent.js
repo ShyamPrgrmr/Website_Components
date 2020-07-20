@@ -7,7 +7,7 @@ export default class FirstComponent extends Component{
     
     constructor(props){
         super(props);
-        this.state = this.props.data;
+        this.state = {...this.props.data,real:this.props.data};
     }
     componentDidMount=()=>{
     }
@@ -66,7 +66,13 @@ export default class FirstComponent extends Component{
     }
 
     onImage=(e)=>{
-        console.log(e)
+        let image = this.props.data.images['img_'+parseInt(e+1)];        
+        this.props.onImageClick(image);
+    }
+
+    onImageClick=(e)=>{
+        e.preventDefault();
+        this.props.onImageClick(e.target.name); 
     }
     
     innerContainer_1=()=>{
@@ -103,13 +109,13 @@ export default class FirstComponent extends Component{
                     </div>
                     <div class='sub-images'>
                         <div class='sub-images--img'>
-                            <img src={this.state.images.img_2} alt='image'></img>
+                            <img src={this.state.images.img_2} name={this.state.images.img_2} onClick={this.onImageClick} alt='image'></img>
                         </div>
                         <div class='sub-images--img'>
-                            <img src={this.state.images.img_3} alt='image'></img>
+                            <img src={this.state.images.img_3} name={this.state.images.img_3} onClick={this.onImageClick} alt='image'></img>
                         </div>
                         <div class='sub-images--img'>
-                            <img src={this.state.images.img_4} alt='image'></img>
+                            <img src={this.state.images.img_4} name={this.state.images.img_4} onClick={this.onImageClick} alt='image'></img>
                         </div>
                     </div> 
                 </>

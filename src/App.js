@@ -17,7 +17,9 @@ export default class  App extends React.Component{
     }
     state={
            data:[],searchkeyword:[], 
-           keywordList:{venueType:[],venueFeature:[]}
+           keywordList:{venueType:[],venueFeature:[]},
+           imgShow:'',
+           isShowPopup:false
           }
 
     addSearchKeyword=(keyword)=>{
@@ -98,10 +100,19 @@ export default class  App extends React.Component{
     displayList = ()=>{
       
       const list = this.state.data.map(item=>{
-        return(<ListComponent data={item}/>)
+        return(<ListComponent data={item} onImageClick={this.showImg}/>)
       });
 
       return list;
+    }
+
+    showImg=(link)=>{
+      this.setState({isShowPopup:true,imgShow:link});
+    }
+
+    closeButton=(e)=>{
+      e.preventDefault();
+      this.setState({isShowPopup:!this.state.isShowPopup});
     }
 
     componentDidMount=()=>{
@@ -110,12 +121,19 @@ export default class  App extends React.Component{
       console.log(this.props);
     }
 
-    render(){
+    showPopup=()=>{
+      return this.state.isShowPopup?'popup':'popup-disable';
+    }
 
-      
+
+    render(){
 
       return(
         <div>
+          <div className={this.showPopup()} >
+            <img className='popup-img' src={this.state.imgShow} alt='image_show'></img>
+            <button className='popup-close' onClick={this.closeButton}>&#10005;</button>
+          </div>
           <Router>
             <Navbar/>
               
@@ -131,7 +149,7 @@ export default class  App extends React.Component{
                     <AboutUs/>
                   </Route>
 
-                  <Route path="/testimonials">
+                  <Route path="/venue">
                     <div className='container'>
                       <Sidebar 
                           addSearchKeyword={this.addSearchKeyword}
