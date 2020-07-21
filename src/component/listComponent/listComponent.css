@@ -471,7 +471,13 @@ html{
     object-fit: fill;
 }
 
-.carousel{
+.innnerContainer__1 .main-image .carousel-root .carousel{
     max-height: 240px;
+    width: 100%;
+}
+
+
+.main-image .carousel-root .carousel .slider-wrapper .slide{
+    height: 100%;
     width: 100%;
 }

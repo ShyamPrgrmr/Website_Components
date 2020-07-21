@@ -67,12 +67,12 @@ export default class FirstComponent extends Component{
 
     onImage=(e)=>{
         let image = this.props.data.images['img_'+parseInt(e+1)];        
-        this.props.onImageClick(image);
+        this.props.onImageClick(image,this.props.data.images,this.props.data.venueName);
     }
 
     onImageClick=(e)=>{
         e.preventDefault();
-        this.props.onImageClick(e.target.name); 
+        this.props.onImageClick(e.target.name,this.props.data.images,this.props.data.venueName); 
     }
     
     innerContainer_1=()=>{
@@ -87,21 +87,21 @@ export default class FirstComponent extends Component{
                        useKeyboardArrows={true} 
                        showIndicators={true} showThumbs={false} >
                             <div>
-                                <img src={this.props.data.images.img_1} />
+                                <img src={this.state.images.img_1} />
             
                             </div>
                             
                             <div>
-                                <img src={this.props.data.images.img_2} />
+                                <img src={this.state.images.img_2} />
                                
                             </div>
 
                             <div>
-                                <img src={this.props.data.images.img_3} />
+                                <img src={this.state.images.img_3} />
                                
                             </div>
                             <div>
-                                <img src={this.props.data.images.img_4} />
+                                <img src={this.state.images.img_4} />
                                 
                             </div>
                        </Carousel>

@@ -10,6 +10,7 @@ import { BrowserRouter as Router,Switch,Route } from 'react-router-dom'
 import  Contactus from './component/contactus/contactUs';
 import Home from './component/home/Home';
 import AboutUs from './component/aboutus/Aboutus';
+import Carousel from './component/popup-carousel/carousel';
 
 export default class  App extends React.Component{
     constructor(props){
@@ -19,7 +20,9 @@ export default class  App extends React.Component{
            data:[],searchkeyword:[], 
            keywordList:{venueType:[],venueFeature:[]},
            imgShow:'',
-           isShowPopup:false
+           isShowPopup:false,
+           imageList:{},
+           popupname:'',
           }
 
     addSearchKeyword=(keyword)=>{
@@ -106,8 +109,8 @@ export default class  App extends React.Component{
       return list;
     }
 
-    showImg=(link)=>{
-      this.setState({isShowPopup:true,imgShow:link});
+    showImg=(link,list,name)=>{
+      this.setState({isShowPopup:true,imgShow:link,imageList:list,popupname:name});
     }
 
     closeButton=(e)=>{
@@ -131,7 +134,7 @@ export default class  App extends React.Component{
       return(
         <div>
           <div className={this.showPopup()} >
-            <img className='popup-img' src={this.state.imgShow} alt='image_show'></img>
+            <Carousel data={this.state.imgShow} name={this.state.popupname} list={this.state.imageList}></Carousel>
             <button className='popup-close' onClick={this.closeButton}>&#10005;</button>
           </div>
           <Router>
