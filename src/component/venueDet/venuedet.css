@@ -1,0 +1,335 @@
+.venue-det-container {
+  display: flex;
+  flex-direction: column; }
+  .venue-det-container .header {
+    margin-top: 4.6rem;
+    height: 20rem; }
+    @media screen and (max-width: 950px) {
+      .venue-det-container .header {
+        height: 15rem; } }
+    @media screen and (max-width: 750px) {
+      .venue-det-container .header {
+        margin-top: 0rem; } }
+    @media screen and (max-width: 720px) {
+      .venue-det-container .header {
+        height: 12rem; } }
+    @media screen and (max-width: 570px) {
+      .venue-det-container .header {
+        height: 10rem; } }
+    @media screen and (max-width: 470px) {
+      .venue-det-container .header {
+        height: 8rem; } }
+    @media screen and (max-width: 380px) {
+      .venue-det-container .header {
+        height: 7rem; } }
+    .venue-det-container .header .carousel-root {
+      height: 100%; }
+      .venue-det-container .header .carousel-root .carousel {
+        height: 100%; }
+        .venue-det-container .header .carousel-root .carousel .slider-wrapper {
+          height: 100%; }
+          .venue-det-container .header .carousel-root .carousel .slider-wrapper .slider {
+            height: 100%; }
+            .venue-det-container .header .carousel-root .carousel .slider-wrapper .slider .slide {
+              height: 100%; }
+              .venue-det-container .header .carousel-root .carousel .slider-wrapper .slider .slide div {
+                display: flex; }
+                .venue-det-container .header .carousel-root .carousel .slider-wrapper .slider .slide div img {
+                  flex: .5;
+                  object-fit: fill; }
+  .venue-det-container .details {
+    padding: 2rem;
+    display: flex; }
+    @media screen and (max-width: 1000px) {
+      .venue-det-container .details {
+        padding: 1rem; } }
+    @media screen and (max-width: 550px) {
+      .venue-det-container .details {
+        flex-direction: column; } }
+    .venue-det-container .details .left {
+      flex: .8;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem; }
+      @media screen and (max-width: 1000px) {
+        .venue-det-container .details .left {
+          padding: .5rem; } }
+      .venue-det-container .details .left .head {
+        display: flex;
+        justify-content: space-between; }
+        @media screen and (max-width: 700px) {
+          .venue-det-container .details .left .head {
+            flex-direction: column; } }
+        @media screen and (max-width: 550px) {
+          .venue-det-container .details .left .head {
+            flex-direction: row; } }
+        .venue-det-container .details .left .head .flow-right {
+          margin-left: auto; }
+          @media screen and (max-width: 700px) {
+            .venue-det-container .details .left .head .flow-right {
+              margin-left: unset;
+              margin-right: auto; } }
+          @media screen and (max-width: 550px) {
+            .venue-det-container .details .left .head .flow-right {
+              margin-left: auto;
+              margin-right: unset; } }
+        .venue-det-container .details .left .head .con-1 {
+          display: flex;
+          flex-direction: column;
+          align-items: left; }
+          .venue-det-container .details .left .head .con-1 .venue-name {
+            font-size: 1.5rem;
+            color: #000;
+            text-align: left; }
+            @media screen and (max-width: 950px) {
+              .venue-det-container .details .left .head .con-1 .venue-name {
+                font-size: 1rem; } }
+          .venue-det-container .details .left .head .con-1 .venue-address {
+            font-size: 1.2rem;
+            color: #000;
+            text-align: left; }
+            @media screen and (max-width: 950px) {
+              .venue-det-container .details .left .head .con-1 .venue-address {
+                font-size: .8rem; } }
+          .venue-det-container .details .left .head .con-1 .info {
+            font-size: .8rem; }
+          .venue-det-container .details .left .head .con-1 .record,
+          .venue-det-container .details .left .head .con-1 .record:active,
+          .venue-det-container .details .left .head .con-1 .record:visited {
+            background-color: #201f24;
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 0;
+            margin-left: auto;
+            border-radius: 2px; }
+            @media screen and (max-width: 950px) {
+              .venue-det-container .details .left .head .con-1 .record,
+              .venue-det-container .details .left .head .con-1 .record:active,
+              .venue-det-container .details .left .head .con-1 .record:visited {
+                padding: 2px;
+                font-size: .8rem; } }
+            @media screen and (max-width: 700px) {
+              .venue-det-container .details .left .head .con-1 .record,
+              .venue-det-container .details .left .head .con-1 .record:active,
+              .venue-det-container .details .left .head .con-1 .record:visited {
+                margin-left: unset;
+                margin-right: auto;
+                margin-top: 10px; } }
+            @media screen and (max-width: 550px) {
+              .venue-det-container .details .left .head .con-1 .record,
+              .venue-det-container .details .left .head .con-1 .record:active,
+              .venue-det-container .details .left .head .con-1 .record:visited {
+                margin-left: auto;
+                margin-right: unset; } }
+      .venue-det-container .details .left .description {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem; }
+        @media screen and (max-width: 950px) {
+          .venue-det-container .details .left .description {
+            margin-top: 2rem; } }
+        .venue-det-container .details .left .description .heading {
+          font-size: 1.5rem;
+          font-weight: inherit;
+          color: #000; }
+          @media screen and (max-width: 950px) {
+            .venue-det-container .details .left .description .heading {
+              font-size: 1.2rem; } }
+        .venue-det-container .details .left .description .text {
+          text-align: justify;
+          margin-top: 1rem;
+          line-height: 20px; }
+          @media screen and (max-width: 950px) {
+            .venue-det-container .details .left .description .text {
+              font-size: .8rem; } }
+    .venue-det-container .details .right {
+      flex: .2;
+      background-color: #201f24;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      max-height: fit-content;
+      align-items: center; }
+      .venue-det-container .details .right .form {
+        display: flex;
+        flex-direction: column; }
+        .venue-det-container .details .right .form input {
+          padding: 5px;
+          border: none;
+          border-radius: 5px;
+          border: 0.1px solid #afabab;
+          font-size: 1rem;
+          font-family: sans-serif; }
+        .venue-det-container .details .right .form label {
+          font-size: 1rem;
+          color: #fff;
+          margin: 10px 0 10px 0; }
+        .venue-det-container .details .right .form .phone {
+          display: flex;
+          justify-content: space-between; }
+          .venue-det-container .details .right .form .phone .in-1 {
+            flex: .2;
+            margin-right: 5px; }
+          .venue-det-container .details .right .form .phone .in-2 {
+            flex: .8; }
+          .venue-det-container .details .right .form .phone input {
+            width: 100%; }
+        .venue-det-container .details .right .form button {
+          border: none;
+          border-radius: 20px;
+          background-color: #fff;
+          color: #000;
+          margin: 10px auto 10px auto;
+          padding: 10px;
+          padding-right: 50px;
+          padding-left: 50px; }
+        .venue-det-container .details .right .form small {
+          color: #fff; }
+  .venue-det-container .venue-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3dcd2; }
+    @media screen and (max-width: 550px) {
+      .venue-det-container .venue-feature {
+        justify-content: left;
+        align-items: flex-start; } }
+    .venue-det-container .venue-feature .container-p {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem; }
+      @media screen and (max-width: 700px) {
+        .venue-det-container .venue-feature .container-p {
+          padding: 2rem; } }
+      @media screen and (max-width: 550px) {
+        .venue-det-container .venue-feature .container-p {
+          padding: 1rem; } }
+      .venue-det-container .venue-feature .container-p .heading {
+        font-size: 1.5rem;
+        font-weight: inherit;
+        color: #000;
+        margin-bottom: 1rem; }
+        @media screen and (max-width: 950px) {
+          .venue-det-container .venue-feature .container-p .heading {
+            font-size: 1.2rem; } }
+      .venue-det-container .venue-feature .container-p .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 3rem; }
+        @media screen and (max-width: 1000px) {
+          .venue-det-container .venue-feature .container-p .grid {
+            grid-gap: 2rem;
+            grid-template-columns: repeat(5, 1fr); } }
+        @media screen and (max-width: 850px) {
+          .venue-det-container .venue-feature .container-p .grid {
+            grid-gap: 1rem;
+            grid-template-columns: repeat(4, 1fr); } }
+        @media screen and (max-width: 550px) {
+          .venue-det-container .venue-feature .container-p .grid {
+            grid-gap: .5rem;
+            grid-template-columns: repeat(4, 1fr); } }
+        @media screen and (max-width: 550px) {
+          .venue-det-container .venue-feature .container-p .grid {
+            grid-gap: 1rem;
+            grid-template-columns: repeat(3, 1fr); } }
+        @media screen and (max-width: 350px) {
+          .venue-det-container .venue-feature .container-p .grid {
+            grid-gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr); } }
+        .venue-det-container .venue-feature .container-p .grid .grid-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: .9rem;
+          color: #4e4c4c; }
+          @media screen and (max-width: 950px) {
+            .venue-det-container .venue-feature .container-p .grid .grid-box {
+              font-size: .9rem; } }
+  .venue-det-container .venue-review {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 3rem; }
+    @media screen and (max-width: 1000px) {
+      .venue-det-container .venue-review {
+        padding: 1rem; } }
+    .venue-det-container .venue-review .heading {
+      font-weight: inherit;
+      font-size: 1.5rem;
+      color: #000;
+      margin-bottom: 1rem; }
+      @media screen and (max-width: 950px) {
+        .venue-det-container .venue-review .heading {
+          font-size: 1.2rem; } }
+    .venue-det-container .venue-review .review-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 1rem;
+      grid-row-gap: .5rem; }
+      @media screen and (max-width: 800px) {
+        .venue-det-container .venue-review .review-grid {
+          grid-gap: 1rem;
+          grid-template-columns: repeat(4, 1fr); } }
+      @media screen and (max-width: 700px) {
+        .venue-det-container .venue-review .review-grid {
+          grid-gap: 1rem;
+          grid-template-columns: repeat(3, 1fr); } }
+      @media screen and (max-width: 600px) {
+        .venue-det-container .venue-review .review-grid {
+          grid-gap: 1rem;
+          grid-template-columns: repeat(2, 1fr); } }
+      .venue-det-container .venue-review .review-grid .grid-box {
+        height: 200px; }
+        .venue-det-container .venue-review .review-grid .grid-box .react-player {
+          width: 100%;
+          height: 100%; }
+  .venue-det-container .distance-calculator {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 1000px) {
+      .venue-det-container .distance-calculator {
+        padding: 1rem; } }
+    .venue-det-container .distance-calculator .heading {
+      font-size: 1.5rem;
+      font-weight: inherit;
+      color: #000; }
+      @media screen and (max-width: 950px) {
+        .venue-det-container .distance-calculator .heading {
+          font-size: 1.2rem; } }
+    .venue-det-container .distance-calculator .distance-calculator-con {
+      display: flex; }
+      @media screen and (max-width: 450px) {
+        .venue-det-container .distance-calculator .distance-calculator-con {
+          flex-direction: column; } }
+      .venue-det-container .distance-calculator .distance-calculator-con .left-con {
+        flex: .5; }
+        @media screen and (max-width: 450px) {
+          .venue-det-container .distance-calculator .distance-calculator-con .left-con {
+            flex: auto; } }
+        .venue-det-container .distance-calculator .distance-calculator-con .left-con .con {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2rem; }
+          .venue-det-container .distance-calculator .distance-calculator-con .left-con .con .space {
+            display: flex;
+            align-items: center; }
+            @media screen and (max-width: 950px) {
+              .venue-det-container .distance-calculator .distance-calculator-con .left-con .con .space {
+                font-size: .8rem; } }
+            .venue-det-container .distance-calculator .distance-calculator-con .left-con .con .space svg {
+              width: 20px;
+              height: 20px;
+              margin-right: 1rem; }
+            .venue-det-container .distance-calculator .distance-calculator-con .left-con .con .space:not(:first-child) {
+              margin-top: 10px; }
+      .venue-det-container .distance-calculator .distance-calculator-con .right-con {
+        flex: .5;
+        height: 300px; }
+        @media screen and (max-width: 450px) {
+          .venue-det-container .distance-calculator .distance-calculator-con .right-con {
+            flex: auto;
+            margin-top: 10px; } }

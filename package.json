@@ -7,8 +7,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "google-map-react": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-player": "^2.5.0",
     "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
@@ -18,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compileSass":"node-sass ./src/component/home/home.scss ./src/component/home/home.css -w"
+    "compileSass": "node-sass ./src/component/venueDet/venuedet.scss ./src/component/venueDet/venuedet.css -w"
   },
   "eslintConfig": {
     "extends": "react-app"

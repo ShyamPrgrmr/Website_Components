@@ -11,6 +11,7 @@ import  Contactus from './component/contactus/contactUs';
 import Home from './component/home/Home';
 import AboutUs from './component/aboutus/Aboutus';
 import Carousel from './component/popup-carousel/carousel';
+import VenueDet from './component/venueDet/VenueDet';
 
 export default class  App extends React.Component{
     constructor(props){
@@ -72,6 +73,7 @@ export default class  App extends React.Component{
 
     fetchList=()=>{
       let data = [{
+        id:'1',
         images:{
           img_1 : 'https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg',
           img_2 : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3iXmITbVs6pb5Aoay2ETR9CJYV6s18Wee7A&usqp=CAU',
@@ -85,6 +87,7 @@ export default class  App extends React.Component{
       },
     
       {
+        id:'2',
         images:{
           img_1 : 'https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg',
           img_2 : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3iXmITbVs6pb5Aoay2ETR9CJYV6s18Wee7A&usqp=CAU',
@@ -121,7 +124,6 @@ export default class  App extends React.Component{
     componentDidMount=()=>{
       this.fetchList();
       this.fetchVenueTypesAndVenueFeatures();
-      console.log(this.props);
     }
 
     showPopup=()=>{
@@ -139,20 +141,21 @@ export default class  App extends React.Component{
           </div>
           <Router>
             <Navbar/>
-              
-              <Switch>
-                  <Route path='/home'>
+             
+                  <Route exact path='/home'>
                     <Home/>
                   </Route>
-                  <Route path="/contactus">
+                  <Route exact  path="/contactus">
                     <Contactus />
                   </Route>
 
-                  <Route path="/aboutus">
+                  <Route exact path="/aboutus">
                     <AboutUs/>
                   </Route>
 
-                  <Route path="/venue">
+                  <Route exact path="/venue/:id" component={VenueDet}></Route>
+
+                  <Route exact path="/venue">
                     <div className='container'>
                       <Sidebar 
                           addSearchKeyword={this.addSearchKeyword}
@@ -171,10 +174,7 @@ export default class  App extends React.Component{
                       
                     </div>    
                   </Route>
-                </Switch>
-
-
-              
+             
             </Router>
             <Footer/>
         </div>

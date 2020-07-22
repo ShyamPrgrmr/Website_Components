@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import './listComponent.css';
+import { Link } from 'react-router-dom';
 export default class FirstComponent extends Component{
     
     constructor(props){
@@ -169,7 +170,7 @@ export default class FirstComponent extends Component{
                 </div>
 
                 <div class='venue__btn--div'>
-                    <button class='btn'>View Details</button>
+                    <Link to={{pathname: `/venue/${this.props.data.id}`,venueid: this.props.data.id }} class='btn'>View Details</Link>
                 </div>
             </>
         );
