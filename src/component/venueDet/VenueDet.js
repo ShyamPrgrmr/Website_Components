@@ -158,18 +158,18 @@ export default class VenueDet extends Component {
                     <input type='date'/>
 
                     <label>Name</label>
-                    <input type='text'/>
+                    <input type='text' placeholder='Name'/>
 
                     <label>Email Id</label>
-                    <input type='text'/>
+                    <input type='text' placeholder='Email'/>
 
                     <label>Phone number</label>
                     <div className='phone'>
                        <div className='in-1'>
-                            <input type='text'></input>   
+                            <input type='text' ></input>   
                         </div> 
                         <div className='in-2'>
-                            <input type='text'></input>
+                            <input type='text' placeholder='phone'></input>
                         </div>
                     </div>
 

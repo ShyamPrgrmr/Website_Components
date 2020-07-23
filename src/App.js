@@ -12,6 +12,8 @@ import Home from './component/home/Home';
 import AboutUs from './component/aboutus/Aboutus';
 import Carousel from './component/popup-carousel/carousel';
 import VenueDet from './component/venueDet/VenueDet';
+import Agreement from './component/agreement/agreement';
+import Firstpage from './component/agreement/firstpage/firstpage'
 
 export default class  App extends React.Component{
     constructor(props){
@@ -151,6 +153,12 @@ export default class  App extends React.Component{
 
                   <Route exact path="/aboutus">
                     <AboutUs/>
+                  </Route>
+
+                  <Route exact path="/agreement" component={Agreement}>
+                  </Route>
+
+                  <Route exact path="/agreement/step1" component={Firstpage}>                    
                   </Route>
 
                   <Route exact path="/venue/:id" component={VenueDet}></Route>

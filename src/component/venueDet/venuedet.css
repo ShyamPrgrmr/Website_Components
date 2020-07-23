@@ -190,8 +190,6 @@
   .venue-det-container .venue-feature {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #e3dcd2; }
     @media screen and (max-width: 550px) {
       .venue-det-container .venue-feature {
@@ -200,10 +198,10 @@
     .venue-det-container .venue-feature .container-p {
       display: flex;
       flex-direction: column;
-      padding: 4rem; }
+      padding: 3rem; }
       @media screen and (max-width: 700px) {
         .venue-det-container .venue-feature .container-p {
-          padding: 2rem; } }
+          padding: 1rem; } }
       @media screen and (max-width: 550px) {
         .venue-det-container .venue-feature .container-p {
           padding: 1rem; } }

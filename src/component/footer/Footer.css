@@ -4,7 +4,7 @@
     padding: 30px;
     background-color: #201f24;
     justify-content: space-between; 
-    
+    overflow: hidden;
 }
 
 
@@ -117,6 +117,10 @@
     }
     .title{
         text-decoration: dotted;
+    }
+
+    .wdi-img{
+        width: 150px;
     }
 }
 

@@ -19,7 +19,8 @@ export default class Sidebar extends Component {
         blogs:'/',
         signinup:'/',
         vendors:'/',
-        joinnow:'/'
+        joinnow:'/',
+        agreement:'/agreement'
     },
     currentRoute:'home'};
 
@@ -64,6 +65,9 @@ export default class Sidebar extends Component {
         else if(this.state.currentRoute==='blogs'){
             return (<Redirect to={this.state.routes.blogs}></Redirect>);
         }
+        else if(this.state.currentRoute==='agreement'){
+            return (<Redirect to={this.state.routes.agreement}></Redirect>);
+        }
     }
 
     handleClick=(clicked)=>{
@@ -90,6 +94,9 @@ export default class Sidebar extends Component {
         }
         else if(name==='blogs'){
             this.setState({currentRoute:'blogs'})
+        }
+        else if(name==='agreement'){
+            this.setState({currentRoute:'agreement'})
         }
     }
 
@@ -156,6 +163,12 @@ export default class Sidebar extends Component {
                                 
                                 >Contact Us</Link>
                             </li>
+
+                            <li><Link name='agreement' onClick={this.handleClick} to={this.state.routes.agreement} 
+                            className={
+                                this.state.currentRoute==="agreement"?'navbar--a navbar--active':'navbar--a navbar--inactive'
+                            }>Agreement</Link></li>
+
                             <li><Link to={this.state.routes.signinup} className="a">Sign In/Up</Link></li>
                             
                         </ul>

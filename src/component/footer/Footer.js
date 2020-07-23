@@ -105,7 +105,7 @@ export default class Footer extends Component{
                 <div class='contact'><svg><use xlinkHref={ico+'#icon-envelop'}></use></svg> info@venuefy.com</div>
                 <div class='contact'><svg><use xlinkHref={ico+'#icon-phone'}></use></svg> +91 90079-67777</div>
                 <p className='title' style={{'marginTop':'30px'}} >Official Event Partner</p>
-                <img src='https://static.wixstatic.com/media/0cbda3_6d68eb4cafc241d08c837a2bfd5021b4~mv2.jpg/v1/fill/w_364,h_89,al_c,q_80,usm_0.66_1.00_0.01/0001%2520(3)_edited.webp' className='img' ></img>
+                <img src='https://static.wixstatic.com/media/0cbda3_6d68eb4cafc241d08c837a2bfd5021b4~mv2.jpg/v1/fill/w_364,h_89,al_c,q_80,usm_0.66_1.00_0.01/0001%2520(3)_edited.webp' className='img wdi-img' ></img>
                 </div>
                 
 

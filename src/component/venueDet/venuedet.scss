@@ -232,8 +232,7 @@
     .venue-feature{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
         background-color: #e3dcd2;
         @media screen and (max-width:550px) {
             justify-content: left;
@@ -242,9 +241,9 @@
         .container-p{
             display: flex;
             flex-direction: column;
-            padding: 4rem;
+            padding: 3rem;
             @media screen and (max-width:700px) {
-                padding: 2rem;
+                padding: 1rem;
             }
             @media screen and (max-width:550px) {
                 padding: 1rem;

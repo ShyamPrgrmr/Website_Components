@@ -27,12 +27,17 @@
     background-color: transparent;
     font-size: 1rem;
 }
-@media(max-width:800px){
+@media(max-width:950px){
     .navbar--a{
         font-size: .8rem;
     }
 }
 
+@media(max-width:800px){
+    .navbar--a{
+        font-size: .6rem;
+    }
+}
 .navbar--a:hover,
 .navbar--a:active{
     color: rgb(255, 255, 255); 
