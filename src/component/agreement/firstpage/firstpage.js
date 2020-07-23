@@ -1,7 +1,6 @@
 import React from 'react';
 import signature from './signature.jpg';
 import './../agreement.css';
-import './firstpage.css'; 
 import {Link} from 'react-router-dom';
 
 export default class FirstPage extends React.Component{
