@@ -156,7 +156,7 @@ export default class FirstComponent extends Component{
     innerContainer_2=()=>{
         return(
             <>
-                <div class='venue__name'>{this.props.data.venueName}</div>
+                <Link class='venue__name' to={{pathname: `/venue/${this.props.data.id}`,venueid: this.props.data.id }}>{this.props.data.venueName}</Link>
                     <div class='venue__address'>{this.props.data.address}</div>
                     <div class='venue__facilities'>
                     {this.facilitiesList()}

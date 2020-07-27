@@ -7,11 +7,29 @@ import Slider from '@material-ui/core/Slider';
 
 export default class Sidebar extends Component {
 
-    state={sliderValue:10,featureList:[],typeList:[],allKeywords:[]}
+    state={sliderValue:10,featureList:[],typeList:[],allKeywords:[],toggler:true}
 
     constructor(props){
         super(props);
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+        
     }   
+
+    updateWindowDimensions() {
+        if(parseInt(window.innerWidth)<=750){
+            this.setState({toggler:false});
+        }else{
+            this.setState({toggler:true});
+        }
+    }
+
+    show=()=>{
+        
+    }
+
+    componentWillUnmount=()=>{
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
 
     componentDidMount=(props=this.props)=>{
         let types = props.keywords.venueType;
@@ -31,6 +49,12 @@ export default class Sidebar extends Component {
             }
         })
         this.setState({typeList:types,featureList:features,allKeywords:tempKeyword});
+        window.addEventListener('resize', this.updateWindowDimensions);
+        if(parseInt(window.innerWidth)<=750){
+            this.setState({toggler:false});
+        }else{
+            this.setState({toggler:true});
+        }
     }
 
     componentWillReceiveProps=(props)=>{
@@ -52,6 +76,8 @@ export default class Sidebar extends Component {
         })
         this.setState({typeList:types,featureList:features,allKeywords:tempKeyword});
     }
+
+   
 
     checkedStatus=(it)=>{
         let list = this.state.allKeywords;
@@ -130,7 +156,12 @@ export default class Sidebar extends Component {
 
     render(){
         return(
-            <div class='sidebar'>
+            <>
+            <div className='toggler' style={{display:window.innerWidth<=750?'flex':'none'}}>
+        <button className='toggler--btn' onClick={(e)=>{e.preventDefault(); this.setState({toggler:!this.state.toggler}) }}>{ this.state.toggler===true? 'Hide Filters' : 'Show Filters'}</button>
+            </div>
+
+            <div class='sidebar' style={{display:this.state.toggler?'flex':'none'}}>
                 <div className='sidebar--menubar'>
                     <button>Filter</button>
                     <button onClick={this.clearAll}>Clear All</button>
@@ -178,6 +209,7 @@ export default class Sidebar extends Component {
            
            
             </div>
+            </>
         );
     }
 }

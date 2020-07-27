@@ -18,7 +18,8 @@ export default class VenueDet extends Component {
                 features:[],
                 mapCenter:{center:{lat: 59.95,
                     lng: 30.33}}
-                }
+                },
+            galleryToggle:false,
             }
     }
 
@@ -75,6 +76,27 @@ export default class VenueDet extends Component {
         return vids;
     }
 
+    loadGallery=(e)=>{
+        e.preventDefault();
+        this.setState({galleryToggle:!this.state.galleryToggle});
+    }   
+
+    displayGallery=()=>{
+        return (
+            <>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            <img className='gallary--image' src='https://images.oyoroomscdn.com/uploads/hotel_image/16810/large/62cab65986879859.jpg'></img>
+            </>
+        )
+    }
+
 
     //this will fetch venue data from server by id
     //currently I am using dummy data in it
@@ -121,6 +143,16 @@ export default class VenueDet extends Component {
     render(){
       return(
       <div className='venue-det-container'>
+
+        <div className='gallary' style={{top:this.state.galleryToggle?'0':'-200%'}}>
+            <div className='gallary--container'>
+                <div className='gallary--inner'>
+                    {this.displayGallery()}
+                </div>
+            </div>
+            <button className='gallary--close' onClick={this.loadGallery} style={{display:this.state.galleryToggle?'flex':'none'}}>x</button>
+        </div>
+        
         <div className='header'>
               <Carousel showThumbs={false} showArrows={true} showStatus={false} infiniteLoop={true}>
                     <div>
@@ -131,7 +163,11 @@ export default class VenueDet extends Component {
                     <div>
                         <img src={this.state.data.images[2]}></img>
                         <img src={this.state.data.images[3]}></img>
-                    </div>        
+                    </div> 
+
+                    <div className='gallery-btn-div'>
+                        <button className='gallery-btn' onClick={this.loadGallery}>Open Gallery</button>
+                    </div>       
               </Carousel>
           </div>
         <div className='details'>
