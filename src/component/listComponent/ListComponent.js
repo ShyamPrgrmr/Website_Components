@@ -25,33 +25,33 @@ export default class FirstComponent extends Component{
         if(e===0){
             let new_images = {
                 img_1:list.img_1,
-                img_2:list.img_1,
-                img_3:list.img_2,
-                img_4:list.img_3,
-            }            
-            this.setState({images:new_images});
-        }else if(e===1){
-            let new_images = {
-                img_1:list.img_2,
                 img_2:list.img_2,
                 img_3:list.img_3,
                 img_4:list.img_4,
             }            
             this.setState({images:new_images});
-        }else if(e===2){
+        }else if(e===1){
             let new_images = {
-                img_1:list.img_3,
+                img_1:list.img_2,
                 img_2:list.img_3,
                 img_3:list.img_4,
                 img_4:list.img_1,
             }            
             this.setState({images:new_images});
-        }else if(e===3){
+        }else if(e===2){
             let new_images = {
-                img_1:list.img_4,
+                img_1:list.img_3,
                 img_2:list.img_4,
                 img_3:list.img_1,
                 img_4:list.img_2,
+            }            
+            this.setState({images:new_images});
+        }else if(e===3){
+            let new_images = {
+                img_1:list.img_4,
+                img_2:list.img_1,
+                img_3:list.img_2,
+                img_4:list.img_3,
             }            
             this.setState({images:new_images});
         }
