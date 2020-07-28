@@ -749,85 +749,47 @@ body {
           font-size: 1.5rem; } }
     .home-container .main-features .main-box {
       display: flex; }
-      .home-container .main-features .main-box .box-1 {
+      .home-container .main-features .main-box .box {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        padding: 10px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        position: relative;
-        background-color: #ddcf92ad; }
-        .home-container .main-features .main-box .box-1__shadow {
-          z-index: 1;
-          z-index: 2;
-          position: absolute;
-          top: 30px;
-          left: 2px;
-          width: 390px;
+        flex: .2;
+        background-color: #ebe5ca;
+        padding: 3rem 1rem; }
+        .home-container .main-features .main-box .box--menu {
+          display: flex;
+          flex-direction: column; }
+        .home-container .main-features .main-box .box--item {
+          color: #000;
+          border: none;
           background-color: #fff;
-          border-radius: 20px;
-          text-align: left;
-          clip-path: polygon(0 0, 78% -9%, 101% 50%, 80% 110%, 0 100%);
-          padding: 20px;
-          margin-bottom: 10px;
-          padding-left: 91px; }
-          @media (max-width: 850px) {
-            .home-container .main-features .main-box .box-1__shadow {
-              display: none; } }
-        .home-container .main-features .main-box .box-1__main {
-          z-index: 2;
-          position: absolute;
-          top: 30px;
-          left: 2px;
-          width: 390px;
-          background-color: #000;
-          color: #fff;
-          border-radius: 20px;
-          border: 1px solid #000;
-          text-align: left;
-          clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
+          font-size: .8rem;
+          font-weight: 400;
           padding: 10px;
-          margin-bottom: 10px;
-          padding-left: 91px; }
-          @media (max-width: 850px) {
-            .home-container .main-features .main-box .box-1__main {
-              width: auto;
-              position: relative;
-              clip-path: polygon(0 0, 100% 0%, 100% 100%, 100% 100%, 0 100%);
-              text-align: center;
-              padding-left: 0px; } }
-          .home-container .main-features .main-box .box-1__main p {
-            color: #fff;
-            font-size: 1rem; }
-            @media (max-width: 850px) {
-              .home-container .main-features .main-box .box-1__main p {
-                font-size: .8rem; } }
-          .home-container .main-features .main-box .box-1__main::after {
-            content: ''; }
-        .home-container .main-features .main-box .box-1 .first-sub {
-          margin-top: 45px !important; }
-        .home-container .main-features .main-box .box-1__sub {
-          background-color: #fff;
-          color: #fff;
-          border-radius: 20px;
-          border: 1px solid #000;
-          padding: 10px;
-          width: 300px; }
-          @media (max-width: 850px) {
-            .home-container .main-features .main-box .box-1__sub {
-              width: auto; } }
-          .home-container .main-features .main-box .box-1__sub:not(:first-child) {
+          border-radius: 25px;
+          border: 1px solid  #000;
+          transition: all .2s ease-in-out;
+          cursor: pointer; }
+          .home-container .main-features .main-box .box--item:not(:first-child) {
             margin-top: 10px; }
-          .home-container .main-features .main-box .box-1__sub p {
-            font-size: 1 rem;
-            color: #000;
-            text-align: center; }
-            @media (max-width: 850px) {
-              .home-container .main-features .main-box .box-1__sub p {
-                font-size: .8rem; } }
+          .home-container .main-features .main-box .box--item__active {
+            width: 130%;
+            z-index: 1;
+            clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            position: relative; }
+            .home-container .main-features .main-box .box--item__active::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 80%;
+              height: 100%;
+              width: 20%;
+              background-color: #fff;
+              clip-path: polygon(0 -1%, 100% 50%, 1% 100%, 90% 50%, -1% 0); }
       .home-container .main-features .main-box .box-2 {
-        flex: auto;
+        flex: .8;
         background-color: #000;
         display: flex;
         align-items: center;

@@ -11,6 +11,7 @@ export default class FirstComponent extends Component{
         this.state = {...this.props.data,real:this.props.data};
     }
     componentDidMount=()=>{
+        this.onImageChange(0);
     }
     
     componentWillUpdate=()=>{
@@ -19,49 +20,40 @@ export default class FirstComponent extends Component{
 
     onImageChange=(e)=>{
        
-        let list = this.state;
+        let list = this.props.data.images;
+        
         if(e===0){
-            let newImages={
-                img_1:list.images.img_1,
-                img_2:list.images.img_2,
-                img_3:list.images.img_3,
-                img_4:list.images.img_4,
-            };
-            this.setState({images:newImages},()=>{
-                
-            });
-
+            let new_images = {
+                img_1:list.img_1,
+                img_2:list.img_1,
+                img_3:list.img_2,
+                img_4:list.img_3,
+            }            
+            this.setState({images:new_images});
         }else if(e===1){
-            let newImages={
-                img_1:list.images.img_2,
-                img_2:list.images.img_3,
-                img_3:list.images.img_4,
-                img_4:list.images.img_1,
-            };
-            this.setState({images:newImages},()=>{
-                
-            });
+            let new_images = {
+                img_1:list.img_2,
+                img_2:list.img_2,
+                img_3:list.img_3,
+                img_4:list.img_4,
+            }            
+            this.setState({images:new_images});
         }else if(e===2){
-            let newImages={
-                img_1:list.images.img_3,
-                img_2:list.images.img_4,
-                img_3:list.images.img_2,
-                img_4:list.images.img_1,
-            };
-            this.setState({images:newImages},()=>{
-                
-            });
+            let new_images = {
+                img_1:list.img_3,
+                img_2:list.img_3,
+                img_3:list.img_4,
+                img_4:list.img_1,
+            }            
+            this.setState({images:new_images});
         }else if(e===3){
-            
-            let newImages={
-                img_1:list.images.img_4,
-                img_2:list.images.img_1,
-                img_3:list.images.img_2,
-                img_4:list.images.img_3,
-            }; 
-            this.setState({images:newImages},()=>{
-                
-            });
+            let new_images = {
+                img_1:list.img_4,
+                img_2:list.img_4,
+                img_3:list.img_1,
+                img_4:list.img_2,
+            }            
+            this.setState({images:new_images});
         }
         
     }
@@ -88,21 +80,21 @@ export default class FirstComponent extends Component{
                        useKeyboardArrows={true} 
                        showIndicators={true} showThumbs={false} >
                             <div>
-                                <img src={this.state.images.img_1} />
+                                <img src={this.props.data.images.img_1} />
             
                             </div>
                             
                             <div>
-                                <img src={this.state.images.img_2} />
+                                <img src={this.props.data.images.img_2} />
                                
                             </div>
 
                             <div>
-                                <img src={this.state.images.img_3} />
+                                <img src={this.props.data.images.img_3} />
                                
                             </div>
                             <div>
-                                <img src={this.state.images.img_4} />
+                                <img src={this.props.data.images.img_4} />
                                 
                             </div>
                        </Carousel>

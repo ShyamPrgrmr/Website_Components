@@ -27,7 +27,10 @@ export default class Home extends Component{
     constructor(cons){
         super(cons);
     }
-    state={selectedCity:'City',selectedArea:'Select Your Area'}
+    state={selectedCity:'City',selectedArea:'Select Your Area',mainFeature:1,mainFeatureData:{
+        title:'Venue Supervisors',
+        desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'
+    }}
 
     onChangeCity=(e)=>{
         let city = e.target.value;
@@ -37,6 +40,26 @@ export default class Home extends Component{
     onChangeArea=(e)=>{
         let area = e.target.value;
         this.setState({selectedArea:area});
+    }
+
+    onMainFeatureClick=(num)=>{
+        let data={title:'',desc:''};
+        if(num===1){
+            data = {title:'Venue supervisors',desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'};
+        }
+        else if(num===2){
+            data = {title:'Free event coordination',desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'};
+        }
+        else if(num===3){
+            data = {title:'No star rating',desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'};
+        }
+        else if(num===4){
+            data = {title:'Segment best discount',desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'};
+        }
+        else if(num===5){
+            data = {title:'Video review',desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'};
+        }
+        this.setState({mainFeature:num,mainFeatureData:data});
     }
 
     render(){
@@ -284,36 +307,19 @@ export default class Home extends Component{
                 <div className='heading'>Our Main Services</div>
                 
                 <div className='main-box'>
-                    <div className='box-1'>
-                        <div className='box-1__shadow'></div>
-                        <div className='box-1__main'>
-                            <p>Venue Supervisors</p>
-                        </div>
-                        
-                        <div className='box-1__sub first-sub'>
-                            <p>Free Event Coordination</p>
-                        </div>
-
-                        <div className='box-1__sub'>
-                            <p>Management Counsultancy</p>
-                        </div>
-
-                        <div className='box-1__sub'>
-                            <p>No Start Rating</p>
-                        </div>
-
-                        <div className='box-1__sub'>
-                            <p>Segment Best Discount</p>
-                        </div>
-
-                        <div className='box-1__sub'>
-                            <p>Video Review</p>
+                    <div className='box'>
+                        <div className='box--menu'>
+                            <button className={this.state.mainFeature===1?'box--item box--item__active':'box--item'} onClick={(e)=>{e.preventDefault();this.onMainFeatureClick(1);}}>Venue supervisors</button>
+                            <button className={this.state.mainFeature===2?'box--item box--item__active':'box--item'} onClick={(e)=>{e.preventDefault();this.onMainFeatureClick(2);}}>Free event coordination</button>
+                            <button className={this.state.mainFeature===3?'box--item box--item__active':'box--item'} onClick={(e)=>{e.preventDefault();this.onMainFeatureClick(3);}}>No star rating</button>
+                            <button className={this.state.mainFeature===4?'box--item box--item__active':'box--item'} onClick={(e)=>{e.preventDefault();this.onMainFeatureClick(4);}}>Segment best discount</button>
+                            <button className={this.state.mainFeature===5?'box--item box--item__active':'box--item'} onClick={(e)=>{e.preventDefault();this.onMainFeatureClick(5);}}>Video Review</button>
                         </div>
                     </div>
                     <div className='box-2'>
                         <div className='block-1'>
-                            <p className='head'>Venue Supervisors</p>
-                            <p className='sub-head'>we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event</p>
+                            <p className='head'>{this.state.mainFeatureData.title}</p>
+                            <p className='sub-head'>{this.state.mainFeatureData.desc}</p>
                         </div>
                         <div className='block-2'>
                             <div className='image' style={{backgroundImage:`url('${img_13}')`}}></div>
