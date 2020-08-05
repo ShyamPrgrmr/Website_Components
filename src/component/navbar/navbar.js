@@ -181,13 +181,14 @@ export default class Sidebar extends Component {
                 <div></div>
                 <div className='nc-brand'>
                     <img src='https://s3.ap-south-1.amazonaws.com/venuefy.images/venuefy-logo.png'></img>
-                </div>
-                <button className='nc-button' onClick={(e)=>{
+                    <button className='nc-button' onClick={(e)=>{
                     e.preventDefault();
                     this.navbartoggle();
-                }}>
-                    <img src={toggler}></img>
-                </button>
+                    }}>
+                        <img src={toggler}></img>
+                    </button>
+                </div>
+                
                 
                 <div className='nc-container' style={{display:this.displayNavbar()}}>
                     <ul>

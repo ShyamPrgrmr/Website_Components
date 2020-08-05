@@ -24,6 +24,7 @@ export default class VenueDet extends Component {
     }
 
     componentDidMount=()=>{
+        window.scrollTo(0, 0)
         this.fetchVenueDetails();
     }
 

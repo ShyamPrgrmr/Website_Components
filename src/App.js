@@ -124,6 +124,7 @@ export default class  App extends React.Component{
     }
 
     componentDidMount=()=>{
+      
       this.fetchList();
       this.fetchVenueTypesAndVenueFeatures();
     }
@@ -132,6 +133,23 @@ export default class  App extends React.Component{
       return this.state.isShowPopup?'popup':'popup-disable';
     }
 
+    venue = () => {return (<div className='container'>                  
+          <Sidebar 
+              addSearchKeyword={this.addSearchKeyword}
+              removeSearchKeyword={this.removeSearchKeyword}
+              keywords={this.state.keywordList}
+              searchedkeyword={this.state.searchkeyword}
+              clearSearch={this.clearSearch}
+          />
+          
+          <div class='search-list'>
+            <SearchBar keywords={this.state.searchkeyword} 
+                removeSearchKeyword={this.removeSearchKeyword}
+            />
+            {this.displayList()}
+          </div>
+          
+        </div> )}
 
     render(){
 
@@ -147,12 +165,11 @@ export default class  App extends React.Component{
                   <Route exact path='/home'>
                     <Home/>
                   </Route>
-                  <Route exact  path="/contactus">
-                    <Contactus />
+                  <Route exact  path="/contactus" component={Contactus}>
                   </Route>
 
-                  <Route exact path="/aboutus">
-                    <AboutUs/>
+                  <Route exact path="/aboutus" component={AboutUs}>
+               
                   </Route>
 
                   <Route exact path="/agreement" component={Agreement}>
@@ -163,24 +180,8 @@ export default class  App extends React.Component{
 
                   <Route exact path="/venue/:id" component={VenueDet}></Route>
 
-                  <Route exact path="/venue">
-                    <div className='container'>
-                      <Sidebar 
-                          addSearchKeyword={this.addSearchKeyword}
-                          removeSearchKeyword={this.removeSearchKeyword}
-                          keywords={this.state.keywordList}
-                          searchedkeyword={this.state.searchkeyword}
-                          clearSearch={this.clearSearch}
-                      />
-                      
-                      <div class='search-list'>
-                        <SearchBar keywords={this.state.searchkeyword} 
-                            removeSearchKeyword={this.removeSearchKeyword}
-                        />
-                        {this.displayList()}
-                      </div>
-                      
-                    </div>    
+                  <Route exact path="/venue" component={this.venue}>
+                       
                   </Route>
              
             </Router>

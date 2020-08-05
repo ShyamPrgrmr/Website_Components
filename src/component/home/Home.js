@@ -27,9 +27,15 @@ export default class Home extends Component{
     constructor(cons){
         super(cons);
     }
+
+    componentDidMount=()=>{
+        window.scrollTo(0, 0);
+    }
+
     state={selectedCity:'City',selectedArea:'Select Your Area',mainFeature:1,mainFeatureData:{
         title:'Venue Supervisors',
-        desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event'
+        desc:'we will be provide Venue Supervisors for your event, to take care of all the stuffs related to the Venue in your event',
+        img:''
     }}
 
     onChangeCity=(e)=>{
@@ -66,7 +72,7 @@ export default class Home extends Component{
         return(
         <div className='home-container'>
             <div className='jumbotron' style={{backgroundImage:`url('${headerImage}')`}}>
-                <p className='text'>#VenuefyYourVenue</p>
+                
                 <div class='search-selector'>
 
                     <div className='city-selector'>
@@ -115,7 +121,6 @@ export default class Home extends Component{
             <div className='services-div'>
                 <div class='background'></div>
                 <div class='services'>
-                    <p class='heading'>Venuefy Services</p>
                     <div class='head-text'>
                         <p>Banquest</p>
                         <p>Resorts</p>
@@ -182,10 +187,13 @@ export default class Home extends Component{
 
                 <Carousel
                 infiniteLoop={true}
-                interval={1} 
+                autoPlay={true}
+                interval={3000} 
+                transitionTime={1000}
                 showArrows={true}  
                 useKeyboardArrows={true} 
-                showIndicators={true} showThumbs={false}>
+                showIndicators={true} showThumbs={false}
+                >
                     <div>
                         <img src={promotion} alt='image'></img>
                         <div className='booknow-box'>
@@ -304,7 +312,7 @@ export default class Home extends Component{
                 </div>
             </div>
             <div className='main-features'>
-                <div className='heading'>Our Main Services</div>
+                <div className='heading'>Key Features</div>
                 
                 <div className='main-box'>
                     <div className='box'>

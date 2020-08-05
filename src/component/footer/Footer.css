@@ -1,7 +1,8 @@
 .footer{
     display: flex;
     margin-top: auto;
-    padding: 30px;
+    padding: 30px 3rem;
+
     background-color: #201f24;
     justify-content: space-between; 
     overflow: hidden;

@@ -7,6 +7,10 @@ export default class Agreement extends Component{
         super(props);
         this.state={checked:false}
     }
+
+    componentDidMount=()=>{
+        window.scrollTo(0, 0);
+    }
     render(){
         return(
         <div className='agreement'>

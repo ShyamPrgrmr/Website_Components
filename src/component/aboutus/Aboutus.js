@@ -33,6 +33,9 @@ export default class AboutUs extends Component{
         this.setState({page:buttonno});
     }
 
+    componentDidMount=()=>{
+        window.scrollTo(0, 0);
+    }
     render(){
         return(
             <div className='aboutus-container'>
