@@ -304,38 +304,74 @@ body {
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column; }
-          .home-container .services-div .services--container .div-1 .info {
-            margin-top: auto;
-            background-color: rgba(0, 0, 0, 0.637);
+          .home-container .services-div .services--container .div-1 .carousel-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px; }
-            .home-container .services-div .services--container .div-1 .info .btn {
-              border-radius: 20px;
-              border: 0.1px #fff solid;
-              font-size: .6rem;
-              padding: .6rem .8rem .6rem .8rem;
-              margin-right: 20px; }
-              @media (max-width: 600px) {
-                .home-container .services-div .services--container .div-1 .info .btn {
-                  padding: .4rem .6rem .4rem .6rem; } }
-            .home-container .services-div .services--container .div-1 .info .venue-details {
+            flex-direction: column; }
+            .home-container .services-div .services--container .div-1 .carousel-box .info {
+              z-index: 20;
+              margin-top: auto;
+              background-color: rgba(0, 0, 0, 0.637);
               display: flex;
-              flex-direction: column; }
-              .home-container .services-div .services--container .div-1 .info .venue-details .venue-name {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #fff; }
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px; }
+              .home-container .services-div .services--container .div-1 .carousel-box .info .btn {
+                border-radius: 20px;
+                border: 0.1px #fff solid;
+                font-size: .6rem;
+                padding: .6rem .8rem .6rem .8rem;
+                margin-right: 20px; }
                 @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-1 .info .venue-details .venue-name {
-                    font-size: .8rem; } }
-              .home-container .services-div .services--container .div-1 .info .venue-details .venue-address {
-                font-size: .8rem;
-                color: #fff; }
-                @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-1 .info .venue-details .venue-address {
-                    font-size: .6rem; } }
+                  .home-container .services-div .services--container .div-1 .carousel-box .info .btn {
+                    padding: .4rem .6rem .4rem .6rem; } }
+              .home-container .services-div .services--container .div-1 .carousel-box .info .venue-details {
+                display: flex;
+                flex-direction: column; }
+                .home-container .services-div .services--container .div-1 .carousel-box .info .venue-details .venue-name {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-1 .carousel-box .info .venue-details .venue-name {
+                      font-size: .8rem; } }
+                .home-container .services-div .services--container .div-1 .carousel-box .info .venue-details .venue-address {
+                  font-size: .8rem;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-1 .carousel-box .info .venue-details .venue-address {
+                      font-size: .6rem; } }
+            .home-container .services-div .services--container .div-1 .carousel-box .carousel-root {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              height: 100%;
+              z-index: 10; }
+              .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel {
+                height: 100%;
+                width: 100%; }
+                .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .control-arrow {
+                  display: none; }
+                .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .control-dots {
+                  display: none; }
+                .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .slider-wrapper {
+                  height: 100%;
+                  width: 100%; }
+                  .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .slider-wrapper .slider {
+                    height: 100%;
+                    width: 100%; }
+                    .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide {
+                      height: 100%;
+                      width: 100%; }
+                      .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div {
+                        height: 100%;
+                        width: 100%; }
+                        .home-container .services-div .services--container .div-1 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div img {
+                          height: 100%;
+                          width: 100%; }
         .home-container .services-div .services--container .div-2 {
           position: absolute;
           top: 0px;
@@ -350,39 +386,75 @@ body {
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column; }
-          .home-container .services-div .services--container .div-2 .info {
-            margin-top: auto;
-            background-color: rgba(0, 0, 0, 0.637);
+          .home-container .services-div .services--container .div-2 .carousel-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px; }
-            .home-container .services-div .services--container .div-2 .info .btn {
-              border-radius: 20px;
-              border: 0.1px #fff solid;
-              font-size: .6rem;
-              padding: .6rem .8rem .6rem .8rem;
-              margin-right: 8%; }
-              @media (max-width: 600px) {
-                .home-container .services-div .services--container .div-2 .info .btn {
-                  padding: .4rem .6rem .4rem .6rem; } }
-            .home-container .services-div .services--container .div-2 .info .venue-details {
+            flex-direction: column; }
+            .home-container .services-div .services--container .div-2 .carousel-box .info {
+              z-index: 20;
+              margin-top: auto;
+              background-color: rgba(0, 0, 0, 0.637);
               display: flex;
-              flex-direction: column;
-              margin-left: 10%; }
-              .home-container .services-div .services--container .div-2 .info .venue-details .venue-name {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #fff; }
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px; }
+              .home-container .services-div .services--container .div-2 .carousel-box .info .btn {
+                border-radius: 20px;
+                border: 0.1px #fff solid;
+                font-size: .6rem;
+                padding: .6rem .8rem .6rem .8rem;
+                margin-right: 8%; }
                 @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-2 .info .venue-details .venue-name {
-                    font-size: .8rem; } }
-              .home-container .services-div .services--container .div-2 .info .venue-details .venue-address {
-                font-size: .8rem;
-                color: #fff; }
-                @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-2 .info .venue-details .venue-address {
-                    font-size: .6rem; } }
+                  .home-container .services-div .services--container .div-2 .carousel-box .info .btn {
+                    padding: .4rem .6rem .4rem .6rem; } }
+              .home-container .services-div .services--container .div-2 .carousel-box .info .venue-details {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10%; }
+                .home-container .services-div .services--container .div-2 .carousel-box .info .venue-details .venue-name {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-2 .carousel-box .info .venue-details .venue-name {
+                      font-size: .8rem; } }
+                .home-container .services-div .services--container .div-2 .carousel-box .info .venue-details .venue-address {
+                  font-size: .8rem;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-2 .carousel-box .info .venue-details .venue-address {
+                      font-size: .6rem; } }
+            .home-container .services-div .services--container .div-2 .carousel-box .carousel-root {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              height: 100%;
+              z-index: 10; }
+              .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel {
+                height: 100%;
+                width: 100%; }
+                .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .control-arrow {
+                  display: none; }
+                .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .control-dots {
+                  display: none; }
+                .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .slider-wrapper {
+                  height: 100%;
+                  width: 100%; }
+                  .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .slider-wrapper .slider {
+                    height: 100%;
+                    width: 100%; }
+                    .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide {
+                      height: 100%;
+                      width: 100%; }
+                      .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div {
+                        height: 100%;
+                        width: 100%; }
+                        .home-container .services-div .services--container .div-2 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div img {
+                          height: 100%;
+                          width: 100%; }
         .home-container .services-div .services--container .div-3 {
           position: absolute;
           top: 0px;
@@ -395,38 +467,74 @@ body {
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column; }
-          .home-container .services-div .services--container .div-3 .info {
-            margin-top: auto;
-            background-color: rgba(0, 0, 0, 0.637);
+          .home-container .services-div .services--container .div-3 .carousel-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px; }
-            .home-container .services-div .services--container .div-3 .info .btn {
-              border-radius: 20px;
-              border: 0.1px #fff solid;
-              font-size: .6rem;
-              padding: .6rem .8rem .6rem .8rem;
-              margin-right: 12%; }
-              @media (max-width: 600px) {
-                .home-container .services-div .services--container .div-3 .info .btn {
-                  padding: .4rem .6rem .4rem .6rem; } }
-            .home-container .services-div .services--container .div-3 .info .venue-details {
+            flex-direction: column; }
+            .home-container .services-div .services--container .div-3 .carousel-box .info {
+              z-index: 20;
+              margin-top: auto;
+              background-color: rgba(0, 0, 0, 0.637);
               display: flex;
-              flex-direction: column; }
-              .home-container .services-div .services--container .div-3 .info .venue-details .venue-name {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #fff; }
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px; }
+              .home-container .services-div .services--container .div-3 .carousel-box .info .btn {
+                border-radius: 20px;
+                border: 0.1px #fff solid;
+                font-size: .6rem;
+                padding: .6rem .8rem .6rem .8rem;
+                margin-right: 12%; }
                 @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-3 .info .venue-details .venue-name {
-                    font-size: .8rem; } }
-              .home-container .services-div .services--container .div-3 .info .venue-details .venue-address {
-                font-size: .8rem;
-                color: #fff; }
-                @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-3 .info .venue-details .venue-address {
-                    font-size: .6rem; } }
+                  .home-container .services-div .services--container .div-3 .carousel-box .info .btn {
+                    padding: .4rem .6rem .4rem .6rem; } }
+              .home-container .services-div .services--container .div-3 .carousel-box .info .venue-details {
+                display: flex;
+                flex-direction: column; }
+                .home-container .services-div .services--container .div-3 .carousel-box .info .venue-details .venue-name {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-3 .carousel-box .info .venue-details .venue-name {
+                      font-size: .8rem; } }
+                .home-container .services-div .services--container .div-3 .carousel-box .info .venue-details .venue-address {
+                  font-size: .8rem;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-3 .carousel-box .info .venue-details .venue-address {
+                      font-size: .6rem; } }
+            .home-container .services-div .services--container .div-3 .carousel-box .carousel-root {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              height: 100%;
+              z-index: 10; }
+              .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel {
+                height: 100%;
+                width: 100%; }
+                .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .control-arrow {
+                  display: none; }
+                .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .control-dots {
+                  display: none; }
+                .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .slider-wrapper {
+                  height: 100%;
+                  width: 100%; }
+                  .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .slider-wrapper .slider {
+                    height: 100%;
+                    width: 100%; }
+                    .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide {
+                      height: 100%;
+                      width: 100%; }
+                      .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div {
+                        height: 100%;
+                        width: 100%; }
+                        .home-container .services-div .services--container .div-3 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div img {
+                          height: 100%;
+                          width: 100%; }
         .home-container .services-div .services--container .div-4 {
           position: absolute;
           top: 0px;
@@ -441,38 +549,74 @@ body {
           background-repeat: no-repeat;
           display: flex;
           flex-direction: column; }
-          .home-container .services-div .services--container .div-4 .info {
-            margin-top: auto;
-            background-color: rgba(0, 0, 0, 0.637);
+          .home-container .services-div .services--container .div-4 .carousel-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px; }
-            .home-container .services-div .services--container .div-4 .info .btn {
-              border-radius: 20px;
-              border: 0.1px #fff solid;
-              font-size: .6rem;
-              padding: .6rem .8rem .6rem .8rem; }
-              @media (max-width: 600px) {
-                .home-container .services-div .services--container .div-4 .info .btn {
-                  padding: .4rem .6rem .4rem .6rem; } }
-            .home-container .services-div .services--container .div-4 .info .venue-details {
+            flex-direction: column; }
+            .home-container .services-div .services--container .div-4 .carousel-box .info {
+              z-index: 20;
+              margin-top: auto;
+              background-color: rgba(0, 0, 0, 0.637);
               display: flex;
-              flex-direction: column;
-              margin-left: 10%; }
-              .home-container .services-div .services--container .div-4 .info .venue-details .venue-name {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #fff; }
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px; }
+              .home-container .services-div .services--container .div-4 .carousel-box .info .btn {
+                border-radius: 20px;
+                border: 0.1px #fff solid;
+                font-size: .6rem;
+                padding: .6rem .8rem .6rem .8rem; }
                 @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-4 .info .venue-details .venue-name {
-                    font-size: .8rem; } }
-              .home-container .services-div .services--container .div-4 .info .venue-details .venue-address {
-                font-size: .8rem;
-                color: #fff; }
-                @media (max-width: 600px) {
-                  .home-container .services-div .services--container .div-4 .info .venue-details .venue-address {
-                    font-size: .6rem; } }
+                  .home-container .services-div .services--container .div-4 .carousel-box .info .btn {
+                    padding: .4rem .6rem .4rem .6rem; } }
+              .home-container .services-div .services--container .div-4 .carousel-box .info .venue-details {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10%; }
+                .home-container .services-div .services--container .div-4 .carousel-box .info .venue-details .venue-name {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-4 .carousel-box .info .venue-details .venue-name {
+                      font-size: .8rem; } }
+                .home-container .services-div .services--container .div-4 .carousel-box .info .venue-details .venue-address {
+                  font-size: .8rem;
+                  color: #fff; }
+                  @media (max-width: 600px) {
+                    .home-container .services-div .services--container .div-4 .carousel-box .info .venue-details .venue-address {
+                      font-size: .6rem; } }
+            .home-container .services-div .services--container .div-4 .carousel-box .carousel-root {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              height: 100%;
+              z-index: 10; }
+              .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel {
+                height: 100%;
+                width: 100%; }
+                .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .control-arrow {
+                  display: none; }
+                .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .control-dots {
+                  display: none; }
+                .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .slider-wrapper {
+                  height: 100%;
+                  width: 100%; }
+                  .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .slider-wrapper .slider {
+                    height: 100%;
+                    width: 100%; }
+                    .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide {
+                      height: 100%;
+                      width: 100%; }
+                      .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div {
+                        height: 100%;
+                        width: 100%; }
+                        .home-container .services-div .services--container .div-4 .carousel-box .carousel-root .carousel .slider-wrapper .slider .slide div img {
+                          height: 100%;
+                          width: 100%; }
   .home-container .booknow {
     height: 25rem;
     position: relative;

@@ -128,22 +128,78 @@ export default class Home extends Component{
                     <div className='services--container'>
                         
                         <div className='div-1' style={{backgroundImage:`url('${img_1}')`}}>
-                            <div class='info'>
+                            
+                            <div className='carousel-box'>
+                                <Carousel
+                                    infiniteLoop={true}
+                                    autoPlay={true}
+                                    stopOnHover={false}
+                                    interval={3000} 
+                                    transitionTime={1000}
+                                    showArrows={true}  
+                                    useKeyboardArrows={true} 
+                                    showIndicators={true} showThumbs={false}
+                                >
+                                    <div>
+                                        <img src={img_1} alt='image'></img>
+                                    </div>
+                                    <div>
+                                        <img src={img_1} alt='image'></img>
+                                    </div>
+                                </Carousel>                
+                            
+                                <div class='info'>
+                                    <div className='venue-details'>
+                                        <p className='venue-name'>Aarti Banquest</p>
+                                        <p className='venue-address'>NewTown</p>
+                                    </div>
+                                    <button class='btn'>Book Now</button>
+                                </div>
+                            </div>
+
+                            {   /*
+                                <div class='info'>
                                 <div className='venue-details'>
                                     <p className='venue-name'>Aarti Banquest</p>
                                     <p className='venue-address'>NewTown</p>
                                 </div>
                                 <button class='btn'>Book Now</button>
-                            </div>    
+                                </div>
+                                */
+                            }
+
                         </div>
                         <div className='div-2' style={{backgroundImage:`url('${img_2}')`}}>
-                            <div class='info'>
+                            
+                        <div className='carousel-box'>
+                                <Carousel
+                                    infiniteLoop={true}
+                                    autoPlay={true}
+                                    interval={3500} 
+                                    transitionTime={1000}
+                                    stopOnHover={false}
+                                    showArrows={true}  
+                                    useKeyboardArrows={true} 
+                                    showIndicators={true} showThumbs={false}
+                                >
+                                    <div>
+                                        <img src={img_2} alt='image'></img>
+                                    </div>
+                                    <div>
+                                        <img src={img_2} alt='image'></img>
+                                    </div>
+                                </Carousel>                
+                            
+                                <div class='info'>
                                 <div className='venue-details'>
                                     <p className='venue-name'>Ganeshji Resorts</p>
                                     <p className='venue-address'>Digha</p>
                                 </div>
                                 <button class='btn'>Book Now</button>
-                            </div> 
+                            </div>
+                            </div>
+
+                             
                         </div>
 
                     </div>
@@ -158,22 +214,65 @@ export default class Home extends Component{
                     <div className='services--container'>
                         
                         <div className='div-3' style={{backgroundImage:`url('${img_3}')`}}>
-                            <div class='info'>
+                        <div className='carousel-box'>
+                                <Carousel
+                                    infiniteLoop={true}
+                                    autoPlay={true}
+                                    interval={3000} 
+                                    stopOnHover={false}
+                                    transitionTime={1000}
+                                    showArrows={true}  
+                                    useKeyboardArrows={true} 
+                                    showIndicators={true} showThumbs={false}
+                                >
+                                    <div>
+                                        <img src={img_3} alt='image'></img>
+                                    </div>
+                                    <div>
+                                        <img src={img_3} alt='image'></img>
+                                    </div>
+                                </Carousel>                
+                            
+                                <div class='info'>
                                 <div className='venue-details'>
                                     <p className='venue-name'>Shivaji Banquest Hall</p>
                                     <p className='venue-address'>Siliguru</p>
                                 </div>
                                 <button class='btn'>Book Now</button>
-                            </div>    
+                            </div>
+                            </div>
+                                
                         </div>
                         <div className='div-4' style={{backgroundImage:`url('${img_4}')`}}>
-                            <div class='info'>
+                            
+                        <div className='carousel-box'>
+                                <Carousel
+                                    infiniteLoop={true}
+                                    autoPlay={true}
+                                    stopOnHover={false}
+                                    interval={3500} 
+                                    transitionTime={1000}
+                                    showArrows={true}  
+                                    useKeyboardArrows={true} 
+                                    showIndicators={true} showThumbs={false}
+                                >
+                                    <div>
+                                        <img src={img_4} alt='image'></img>
+                                    </div>
+                                    <div>
+                                        <img src={img_4} alt='image'></img>
+                                    </div>
+                                </Carousel>                
+                            
+                                <div class='info'>
                                 <div className='venue-details'>
                                     <p className='venue-name'>Hang-e-out</p>
                                     <p className='venue-address'>Saltlake</p>
                                 </div>
                                 <button class='btn'>Book Now</button>
-                            </div> 
+                            </div>
+                            </div>
+                             
                         </div>
 
                     </div>
