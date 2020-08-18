@@ -382,6 +382,12 @@ body{
                     display: flex;
                     flex-direction: column;
 
+                    @media screen and (max-width:600px){
+                        width: 100%;
+                        clip-path: polygon(0 0,99.5% 0,0 99.5%);
+                        flex-direction: column-reverse;
+                    }
+
                     .carousel-box{
                         width: 100%;
                         height: 100%;
@@ -397,6 +403,11 @@ body{
                             justify-content:space-between;
                             align-items: center;
                             padding: 10px;
+                            
+                            @media screen and (max-width:600px){
+                                margin-top: 0;
+                            }
+
                             .btn{
                                 border-radius: 20px;
                                 border:0.1px #fff solid;
@@ -406,6 +417,7 @@ body{
     
                                 @media (max-width:600px){
                                     padding: .4rem .6rem .4rem .6rem;
+                                    margin-right: 12%;
                                  }
                             }
         
@@ -484,7 +496,6 @@ body{
                     height: 100%;
                     padding-left: 2px;
                     clip-path: polygon(0 0,100% 0%,100% 100%,10% 100%);
-                    
                     background-image: url('https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg');
                     background-position: top;
                     background-size: cover;
@@ -492,6 +503,12 @@ body{
                     display: flex;
                     flex-direction: column;
                     
+                    @media screen and (max-width:600px){
+                        width: 100%;
+                        left: 0px;
+                        clip-path: polygon(100% 0.5%,100% 100%,0.5% 100%);
+                        flex-direction: column-reverse;
+                    }
                     .carousel-box{
                         width: 100%;
                         height: 100%;
@@ -516,13 +533,17 @@ body{
     
                                 @media (max-width:600px){
                                     padding: .4rem .6rem .4rem .6rem;
-                                 }
+                                    margin-right: 0px;
+                                }
                             }
         
                             .venue-details{
                                 display: flex;
                                 flex-direction: column;
                                 margin-left: 10%;
+                                @media (max-width:600px){
+                                    margin-left: 12%;
+                                }
                                 .venue-name{
                                     font-size: 1rem;
                                     font-weight: 500;
@@ -599,6 +620,11 @@ body{
                     background-repeat: no-repeat;
                     display: flex;
                     flex-direction: column;
+
+                    @media screen and (max-width:600px){
+                        clip-path: polygon(0 0.5%,99.5% 100%,0% 100%);
+                        width: 100%;
+                    }
                     
                     .carousel-box{
                         width: 100%;
@@ -708,6 +734,12 @@ body{
                     display: flex;
                     flex-direction: column;
 
+                    @media screen and (max-width:600px){
+                        clip-path: polygon(0.5% 0%,99.5% 0%,100% 100%);
+                        width: 100%;
+                        left: 0px;
+                    }
+
                     .carousel-box{
                         width: 100%;
                         height: 100%;
@@ -723,6 +755,10 @@ body{
                             justify-content:space-between;
                             align-items: center;
                             padding: 10px;
+
+                            @media screen and (max-width:600px){
+                                    margin-top: 0px;
+                            }
                             .btn{
                                 border-radius: 20px;
                                 border:0.1px #fff solid;
@@ -738,6 +774,9 @@ body{
                                 display: flex;
                                 flex-direction: column;
                                 margin-left: 10%;
+                                @media screen and (max-width:600px){
+                                    margin-left: 12%;
+                                 }
                                 .venue-name{
                                     font-size: 1rem;
                                     font-weight: 500;
