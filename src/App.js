@@ -26,12 +26,179 @@ export default class  App extends React.Component{
            isShowPopup:false,
            imageList:{},
            popupname:'',
-          }
+           signupuser:false,
+           signupbus:false,
+           isloggedIn:false
+        }
 
     addSearchKeyword=(keyword)=>{
       let list = this.state.searchkeyword;
       list.push(keyword);
       this.setState({searchkeyword:list});
+    }
+
+    showCustomerPopup=()=>{
+      this.setState({signupuser:true});
+    }
+
+    showBusinessPopup=()=>{
+      this.setState({signupbus:true});
+    }
+
+    popupBusiness=()=>{
+      return(
+        <div className={this.state.signupbus?'popup-c':'popup-c-closed'} >  
+          <div className='login--popup'> 
+            
+            <div className='left'>
+              <h1>Hey! Partner Welcome Back!</h1>
+              <div className='left--container'>
+                <h2>Sign In</h2>
+                <label for='email'>Email/Phone</label>
+                <input type='text' name='email' placeholder='Enter Email/Phone'></input>
+                <label for='password'>Password</label>
+                <input type='text' name='email' placeholder='Password'></input>
+                <button onClick={
+                  (e)=>{e.preventDefault();
+                  this.setState({isloggedIn:true,signupbus:false});
+                }}>Login</button>
+                <div className='flex-r'>
+                  <small>or<b><a href='#'> Login Via OTP</a></b></small>
+                  <small><b><a href='#'>Forgot Password?</a></b></small>
+                </div>
+              </div>
+            </div>
+            <div className='right'>
+              
+              <div className='close'>
+                <button className='closebtn' 
+                  onClick={(e)=>{
+                    e.preventDefault();
+                    this.setState({signupbus:!this.state.signupbus})
+                  }}
+                >X</button>
+              </div>
+
+              <h1>Sign Up</h1>
+              <div className='right--container'>
+                <label for='email'>Name</label>
+                <input type='text' name='email' placeholder='Enter Name'></input>
+                <label for='email'>Email Id</label>
+                <input type='text' name='email' placeholder='Enter Email'></input>
+                
+                <label for='email'>Mobile</label>
+                
+                <div className='mobile'>
+                    <select>
+                        <option>+91</option>
+                        <option>+92</option>
+                    </select>
+                    <input type='text' placeholder='Enter Mobile number'></input>
+                </div>
+                
+                <label for='email'>Whatsapp number</label>
+                
+                <div className='mobile'>
+                    <select>
+                        <option>+91</option>
+                        <option>+92</option>
+                    </select>
+                    <input type='text' placeholder='Enter Whatsapp number'></input>
+                </div>
+
+
+                <label>City</label>
+                <select>
+                        <option>Kolkata</option>
+                        <option>Kolkata</option>
+                </select>
+
+                <label for='password'>Password</label>
+                <input type='text' name='email' placeholder='Password'></input>
+                <label for='password'>Confirm Password</label>
+                <input type='text' name='email' placeholder='Confirm Password'></input>
+                <div className='flex'>
+                  <input type='checkbox' className='checkbox'></input><small>  I agree with the <b>Terms & Condition</b></small>
+                </div>
+                <button>Submit</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    popupCustomer=()=>{
+      return(
+        <div className={this.state.signupuser?'popup-c':'popup-c-closed'} >  
+          <div className='login--popup'> 
+            <div className='left'>
+              <h1>Hey! User Welcome Back!</h1>
+              <div className='left--container'>
+                <h2>Sign In</h2>
+                <label for='email'>Email/Phone</label>
+                <input type='text' name='email' placeholder='Enter Email/Phone'></input>
+                <label for='password'>Password</label>
+                <input type='text' name='email' placeholder='Password'></input>
+                <button onClick={
+                  (e)=>{e.preventDefault();
+                  this.setState({isloggedIn:true,signupuser:false});
+                }}>Login</button>
+                <div className='flex-r'>
+                  <small>or<b><a href='#'> Login Via OTP</a></b></small>
+                  <small><b><a href='#'>Forgot Password?</a></b></small>
+                </div>
+              </div>
+            </div>
+            <div className='right'>
+            <div className='close'>
+                <button className='closebtn' 
+                  onClick={(e)=>{
+                    e.preventDefault();
+                    this.setState({signupuser:!this.state.signupuser})
+                  }}
+                >X</button>
+              </div>
+              <h1>Sign Up</h1>
+              <div className='right--container'>
+                <label for='email'>Name</label>
+                <input type='text' name='email' placeholder='Enter Name'></input>
+                <label for='email'>Email Id</label>
+                <input type='text' name='email' placeholder='Enter Email'></input>
+                
+                <label for='email'>Mobile</label>
+                
+                <div className='mobile'>
+                    <select>
+                        <option>+91</option>
+                        <option>+92</option>
+                    </select>
+                    <input type='text' placeholder='Enter Mobile number'></input>
+                </div>
+                
+                <label for='email'>Whatsapp number</label>
+                
+                <div className='mobile'>
+                    <select>
+                        <option>+91</option>
+                        <option>+92</option>
+                    </select>
+                    <input type='text' placeholder='Enter Whatsapp number'></input>
+                </div>
+
+                <label for='password'>Password</label>
+                <input type='text' name='email' placeholder='Password'></input>
+                <label for='password'>Confirm Password</label>
+                <input type='text' name='email' placeholder='Confirm Password'></input>
+                <div className='flex'>
+                  <input type='checkbox' className='checkbox'></input><small>  I agree with the <b>Terms & Condition</b></small>
+                </div>
+                <button>Submit</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     }
 
     clearSearch=(remove)=>{
@@ -155,12 +322,14 @@ export default class  App extends React.Component{
 
       return(
         <div>
+          {this.popupCustomer()}
+          {this.popupBusiness()}
           <div className={this.showPopup()} >
             <Carousel data={this.state.imgShow} name={this.state.popupname} list={this.state.imageList}></Carousel>
             <button className='popup-close' onClick={this.closeButton}>&#10005;</button>
           </div>
           <Router>
-            <Navbar/>
+            <Navbar isLoggedIn={this.state.isloggedIn} showCustomerPopup={this.showCustomerPopup} showBusinessPopup={this.showBusinessPopup} />
              
                   <Route exact path='/home'>
                     <Home/>

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import './navbar.css';
 import toggler from './toggler.png';
 import { Link,Redirect } from 'react-router-dom';
-
+import Dropdown from './dropdown/Dropdown';
 import icons from './icons.svg';
 
 export default class Sidebar extends Component {
@@ -20,16 +20,19 @@ export default class Sidebar extends Component {
         signinup:'/',
         vendors:'/',
         joinnow:'/',
-        agreement:'/agreement'
+        agreement:'/agreement',
+        
     },
-    currentRoute:'home'};
+    currentRoute:'home',
+    isLoggedIn:false
+    };
 
     componentDidMount=()=>{
-        
+        this.setState({isLoggedIn:this.props.isLoggedIn});
     }
 
     componentWillReceiveProps=(props)=>{
-        
+        this.setState({isLoggedIn:props.isLoggedIn});
     }
 
     navbartoggle=()=>{
@@ -41,6 +44,13 @@ export default class Sidebar extends Component {
     }
 
 
+    showUserPopup=()=>{
+        this.props.showCustomerPopup();
+    }
+
+    showBusinessPopup=()=>{
+        this.props.showBusinessPopup();
+    }
 
     redirect=()=>{
         if(this.state.currentRoute==='contact'){
@@ -169,7 +179,7 @@ export default class Sidebar extends Component {
                                 this.state.currentRoute==="agreement"?'navbar--a navbar--active':'navbar--a navbar--inactive'
                             }>Agreement</Link></li>
 
-                            <li><Link to={this.state.routes.signinup} className="a">Sign In/Up</Link></li>
+                            <li><Dropdown showUserPopup={this.showUserPopup} showBusinessPopup={this.showBusinessPopup} isLoggedIn={this.state.isLoggedIn}/></li>
                             
                         </ul>
                     </div>
@@ -200,7 +210,7 @@ export default class Sidebar extends Component {
                         <li><Link to={this.state.routes.blogs} className='navbar--a navbar--inactive'>Blogs</Link></li>
                         <li><Link className='navbar--a navbar--inactive' to={this.state.routes.joinnow}>Join Now</Link></li>
                         <li><Link className='navbar--a navbar--inactive' to={this.state.routes.contactus}>Contact Us</Link></li>
-                        <li><Link to={this.state.routes.signinup} className="a">Sign In/Up</Link></li>
+                        <li><Dropdown isLoggedIn={this.state.isLoggedIn}/></li>
                 </ul>
                 </div>
             
