@@ -1,0 +1,29 @@
+.aboutus-container {
+  margin-top: 4.6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #e3dcd2; }
+  .aboutus-container .heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #000;
+    word-spacing: 2px;
+    line-height: 2px; }
+  .aboutus-container .button-box {
+    margin-top: 2rem;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; }
+    .aboutus-container .button-box__btn {
+      border: none;
+      background-color: #fff;
+      padding: 20px;
+      text-transform: capitalize;
+      color: #000;
+      border-radius: 10px; }
+      .aboutus-container .button-box__btn:hover, .aboutus-container .button-box__btn:active {
+        background-color: #e9d4b6; }
+    .aboutus-container .button-box .button-active {
+      background-color: #e9d4b6; }

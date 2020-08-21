@@ -11,7 +11,9 @@ export default class SearchBar extends Component{
     state={list:[]}
 
     componentDidMount=()=>{ 
-       this.setState({list:this.props.keywords});
+        window.scroll(0,0);
+        this.setState({list:this.props.keywords});
+       
     }
 
     componentWillReceiveProps=(newProps)=>{

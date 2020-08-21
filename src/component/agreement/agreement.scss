@@ -1,0 +1,120 @@
+.agreement{
+    margin-top: 4.5rem;
+    @media screen and (max-width:750px){
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    color: #d1c2af;
+    background-color: #201f24;
+    border-bottom: 1px solid #fff;
+    &__logo{
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    &__heading{
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+    }
+    .flex-verticle{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
+    &__box{
+        margin: 5rem 5rem 1rem 5rem;
+        @media screen and (max-width:800px) {
+            padding: 1rem;
+        }
+        @media screen and (max-width:650px) {
+            margin: 2rem 2rem 1rem 2rem;
+        }
+        padding: 2rem;
+        border-radius: 20px;
+        border: solid 1px #d1c2af;
+        box-shadow: 0 0 1rem #d1c2af;
+        height: 20rem;
+        scroll-behavior: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        overflow-y: scroll;
+        &--heading{
+            text-align: center;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            margin-bottom: 2rem;
+        }
+        &--paragraph{
+            text-align: justify;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--label{
+            font-size: 1rem;
+            margin: 10px 0 10px 0;
+            span{
+                color: red;
+            }
+        }
+        .margin-top-small{
+            margin-top: 10px;
+        }
+        
+        &--btn{
+            padding: 10px;
+            color: #000;
+            background-color: rgb(170, 170, 170);
+            font-size: 1rem;
+            border: none;
+            margin-right: auto;
+            margin-left: auto;
+            text-decoration: none;
+            
+            &--active{
+                background-color: #fff;
+            }
+        }
+        &--select,&--input{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            border: 0.1px solid #fff;
+            font-size: 1rem;
+            font-family: sans-serif;
+        }
+    }
+    &__confirm{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 5rem 1rem 5rem;
+        .checkbox{
+            label{
+                color: #fff;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            margin-bottom: 10px;
+        }
+        .btn{
+            padding: 10px;
+            color: #000;
+            background-color: rgb(170, 170, 170);
+            font-size: 1rem;
+            border: none;
+            margin-right: auto;
+            margin-left: auto;
+            text-decoration: none;
+            
+            &--active{
+                background-color: #fff;
+            }
+        }
+
+    }
+
+
+}

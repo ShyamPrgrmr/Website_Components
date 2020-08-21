@@ -1,0 +1,40 @@
+.carousel{
+    max-height: none;
+}
+
+
+.popup-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+.popup-container h1{
+    padding: 10px;
+    color: #fff;
+}
+
+.popup-container .carousel-root .carousel .slider-wrapper .slide{
+    height: 70%;
+    width: 40%;
+}
+
+.popup-container .carousel-root  .carousel .slide img{
+    width: 50%;
+}
+
+.popup-container .carousel-root .carousel .slider-wrapper .slide div{
+    background-color: transparent;
+}
+
+.carousel .slide{
+    background-color: transparent;
+}
+
+.carousel .thumbs-wrapper .thumbs  { 
+    display: flex;
+    justify-content: center;
+}

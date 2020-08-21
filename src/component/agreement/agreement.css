@@ -1,0 +1,94 @@
+.agreement {
+  margin-top: 4.5rem;
+  color: #d1c2af;
+  background-color: #201f24;
+  border-bottom: 1px solid #fff; }
+  @media screen and (max-width: 750px) {
+    .agreement {
+      margin-top: 0px;
+      margin-bottom: 0px; } }
+  .agreement__logo {
+    padding-top: 1rem;
+    padding-left: 1rem; }
+  .agreement__heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-top: 1.5rem; }
+  .agreement .flex-verticle {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden; }
+  .agreement__box {
+    margin: 5rem 5rem 1rem 5rem;
+    padding: 2rem;
+    border-radius: 20px;
+    border: solid 1px #d1c2af;
+    box-shadow: 0 0 1rem #d1c2af;
+    height: 20rem;
+    scroll-behavior: auto;
+    overflow-y: scroll; }
+    @media screen and (max-width: 800px) {
+      .agreement__box {
+        padding: 1rem; } }
+    @media screen and (max-width: 650px) {
+      .agreement__box {
+        margin: 2rem 2rem 1rem 2rem; } }
+    .agreement__box::-webkit-scrollbar {
+      display: none; }
+    .agreement__box--heading {
+      text-align: center;
+      font-size: 1.4rem;
+      text-decoration: underline;
+      margin-bottom: 2rem; }
+    .agreement__box--paragraph {
+      text-align: justify;
+      font-size: 1rem;
+      margin-bottom: 1.5rem; }
+    .agreement__box--label {
+      font-size: 1rem;
+      margin: 10px 0 10px 0; }
+      .agreement__box--label span {
+        color: red; }
+    .agreement__box .margin-top-small {
+      margin-top: 10px; }
+    .agreement__box--btn {
+      padding: 10px;
+      color: #000;
+      background-color: #aaaaaa;
+      font-size: 1rem;
+      border: none;
+      margin-right: auto;
+      margin-left: auto;
+      text-decoration: none; }
+      .agreement__box--btn--active {
+        background-color: #fff; }
+    .agreement__box--select, .agreement__box--input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      border: 0.1px solid #fff;
+      font-size: 1rem;
+      font-family: sans-serif; }
+  .agreement__confirm {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem 1rem 5rem; }
+    .agreement__confirm .checkbox {
+      margin-bottom: 10px; }
+      .agreement__confirm .checkbox label {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 1rem; }
+    .agreement__confirm .btn {
+      padding: 10px;
+      color: #000;
+      background-color: #aaaaaa;
+      font-size: 1rem;
+      border: none;
+      margin-right: auto;
+      margin-left: auto;
+      text-decoration: none; }
+      .agreement__confirm .btn--active {
+        background-color: #fff; }
